@@ -1,0 +1,7 @@
+alias ls='ls --color=auto'
+alias ll='ls -ahlF'
+alias la='ls -a'
+alias cd\.\.='cd ..'
+alias Desktop='cd ~/Desktop'
+alias powertop='sudo powertop'
+alias adb='/home/linuxer/Data/Develop/.workingWith/android-studio/sdk/platform-tools/adb'
