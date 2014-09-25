@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=PyCharm
+Comment=
+Exec=/home/linuxer/Data/Develop/.workingWith/pycharm/bin/pycharm.sh
+Icon=/home/linuxer/Data/Develop/.workingWith/pycharm/bin/pycharm.png
+#Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true
+#NoDisplay=false
