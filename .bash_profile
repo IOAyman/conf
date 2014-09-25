@@ -10,14 +10,15 @@ export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit:powertop*:drSetCPUGov*:drBloc
 
 # virtualenvwrapper config
 export WORKON_HOME="~/.virtualenvs"
-. /usr/local/bin/virtualenvwrapper.sh
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then . /usr/local/bin/virtualenvwrapper.sh; fi
 
-
+# aliases
+if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 
 ###############   Funcs   ########################################
 
 # Duck it up :D
-duckduckgo() { ddg="https://www.duckduckgo.com/?q="; ff="firefox"; if [[ $1 ]]; then "$ff" -new-tab "$ddg"$(echo ${1//[^a-zA-Z0-9]/+}); else echo 'Usage: DuckDuckGo "[seach term]"'; fi }
+ddg() { ddg="https://www.duckduckgo.com/?q="; ff="firefox"; if [[ $1 ]]; then "$ff" -new-tab "$ddg"$(echo ${1//[^a-zA-Z0-9]/+}); else echo 'Usage: DuckDuckGo "[seach term]"'; fi }
 
 drWhereAmI() { python2 /home/linuxer/Data/Develop/.workingWith/PycharmProjects/Fast-pyTools/whereami.py; }
 
@@ -38,6 +39,6 @@ drBlock() { sudo ngrep -i -d any -q -K 15 "$( cat ~/.deny )";}
 
 
 
-if [ -a ~/.welcomeback ]; then cat ~/.welcomeback && sleep .5; fi
-echo -e "\n"
+if [ -a ~/.welcomeback ]; then cat ~/.welcomeback && sleep .5 echo -e "\n"; fi
 if [ -f ~/.screenfetch-dev ]; then ~/.screenfetch-dev; fi
+echo -e "\n"
