@@ -20,7 +20,7 @@ if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 # Duck it up :D
 ddg() { ddg="https://www.duckduckgo.com/?q="; ff="firefox"; if [[ $1 ]]; then "$ff" -new-tab "$ddg"$(echo ${1//[^a-zA-Z0-9]/+}); else echo 'Usage: DuckDuckGo "[seach term]"'; fi }
 
-drWhereAmI() { python2 /home/linuxer/Data/Develop/.workingWith/PycharmProjects/Fast-pyTools/whereami.py; }
+drWhereAmI() { python2 /home/linuxer/Data/Develop/dot.py/Fast-pyTools/whereami.py; }
 
 # -n  Dont resolve hostnames  (speeds up the process)
 drGrepConnections() { listOF="lsof -i -Pnl"; doIt="$listOF | grep $1" ; echo -e "\n Usage: drGrepConnections [processName]\n"; if [[ $1 ]]; then echo -e "Connections count: $($doIt | wc -l)\n" && $doIt; else echo -e "Connections count: $($listOF | wc -l)\n" && $listOF; fi }
