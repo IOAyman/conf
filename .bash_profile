@@ -6,11 +6,17 @@ export PS1='\[\033[01;32m\]\w\[\033[00m\] -> '
 export HISTCONTROL=ignoreboth
 
 # CMDs to ignore as well
-export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit:powertop*:drSetCPUGov*:drBlock*:welcomeback*"
+export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit:powertop*:drSetCPUGov*:drBlock*:welcomeback*:drloop*"
 
 # virtualenvwrapper config
 export WORKON_HOME="~/.virtualenvs"
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then . /usr/local/bin/virtualenvwrapper.sh; fi
+
+#JDK8
+if [ -d /opt/jdk8 ]; then export JAVA_HOME='/opt/jdk8' && export PATH=/opt/jdk8/bin:$PATH; fi
+
+#mvn
+if [ -d /opt/maven3 ]; then export PATH=/opt/maven3/bin:$PATH ; fi
 
 # aliases
 if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
@@ -31,11 +37,11 @@ drSetCPUGov() { if [[ $1 ]]; then for i in 0 1 2 3; do sudo cpufreq-set -c $i -g
 
 drLen() { if [[ $1 ]]; then python -c print\(len\(\'$1\'\)\); fi; }
 
-drDefine() { if [[ $1 ]]; then ~/Data/Develop/.workingWith/PycharmProjects/Fast-pyTools/define.py $1; fi }
+drDefine() { if [[ $1 ]]; then ~/Data/Develop/dot.py/Fast-pyTools/define.py $1; fi }
 
 drBlock() { sudo ngrep -i -d any -q -K 15 "$( cat ~/.deny )";}
 
-
+drloop() { waittime=60 ; if [[ $1 ]]; then waittime=$1; fi ; while true; do sudo service tor restart && sudo service privoxy restart && echo "sleeping for $waittime" && sleep $waittime ; done }
 
 
 
