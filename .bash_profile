@@ -6,14 +6,15 @@ export PS1='\[\033[01;32m\]\w\[\033[00m\] -> '
 export HISTCONTROL=ignoreboth
 
 # CMDs to ignore as well
-export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit:powertop*:drSetCPUGov*:drBlock*:welcomeback*:drloop*"
+export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit:powertop*:drSetCPUGov*:drBlock*:welcomeback*:drloop*:drdesktop*"
 
 # virtualenvwrapper config
 export WORKON_HOME="~/.virtualenvs"
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then . /usr/local/bin/virtualenvwrapper.sh; fi
 
 #JDK8
-if [ -d /opt/jdk8 ]; then export JAVA_HOME='/opt/jdk8' && export PATH=/opt/jdk8/bin:$PATH; fi
+# Now disabled cuz it's already at /etc/profile
+#if [ -d /opt/jdk8 ]; then export JAVA_HOME='/opt/jdk8' && export PATH=/opt/jdk8/bin:$PATH; fi
 
 #mvn
 if [ -d /opt/maven3 ]; then export PATH=/opt/maven3/bin:$PATH ; fi
