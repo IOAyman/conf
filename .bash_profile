@@ -25,24 +25,24 @@ if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
 ###############   Funcs   ########################################
 
 # Duck it up :D
-ddg() { ddg="https://www.duckduckgo.com/?q="; ff="firefox"; if [[ $1 ]]; then "$ff" -new-tab "$ddg"$(echo ${1//[^a-zA-Z0-9]/+}); else echo 'Usage: DuckDuckGo "[seach term]"'; fi }
+ddg() { local readonly ddg="ddg.gg/?q="; local readonly ff="firefox"; if [[ $# -ne 0 ]]; then $ff -new-tab $ddg${1//[^a-zA-Z0-9]/+}; else echo "Usage: $0 \"[seach term]\""; fi }
 
-drWhereAmI() { python2 /home/linuxer/Data/Develop/dot.py/Fast-pyTools/whereami.py; }
+drWhereAmI() { local readonly src='/home/linuxer/Data/Develop/dot.py/Fast-pyTools/whereami.py'; [[ -f $src ]] && python2 $src; }
 
 # -n  Dont resolve hostnames  (speeds up the process)
-drGrepConnections() { listOF="lsof -i -Pnl"; doIt="$listOF | grep $1" ; echo -e "\n Usage: drGrepConnections [processName]\n"; if [[ $1 ]]; then echo -e "Connections count: $($doIt | wc -l)\n" && $doIt; else echo -e "Connections count: $($listOF | wc -l)\n" && $listOF; fi }
+drGrepConnections() { local readonly listOF="lsof -i -Pnl"; echo -e "\n Usage: drGrepConnections [processName]\n"; if [[ $# -gt 0 ]]; then echo -e "Connections count: `$listOF | grep -e $1 | wc -l`\n" && $listOF | grep -e $1; else echo -e "Connections count: `$listOF | wc -l`\n" && $listOF; fi }
 
 welcomeback(){ drSetCPUGov performance ; powertop; }
 
 drSetCPUGov() { if [[ $1 ]]; then for i in 0 1 2 3; do sudo cpufreq-set -c $i -g $1; done; else cpufreq-info; fi; }
 
-drLen() { if [[ $1 ]]; then python -c print\(len\(\'$1\'\)\); fi; }
+drLen() { [[ $# -gt 0 ]] && python -c "print ( len ( '$*' ) )" || echo "EMPTY STRING!"; }
 
-drDefine() { if [[ $1 ]]; then ~/Data/Develop/dot.py/Fast-pyTools/define.py $1; fi }
+drDefine() { local readonly src=~/Develop/dot.py/Fast-pyTools/define.py ; [[ $# -gt 0 && -f $src ]] && python2 $src $1 || echo "Err!"; }
 
-drBlock() { sudo ngrep -i -d any -q -K 15 "$( cat ~/.deny )";}
+drBlock() { sudo ngrep -i -d any -q -K 15 "`cat ~/.deny`";}
 
-drloop() { waittime=60 ; if [[ $1 ]]; then waittime=$1; fi ; while true; do sudo service tor restart && sudo service privoxy restart && echo "sleeping for $waittime" && sleep $waittime ; done }
+drloop() { waittime=60 ; [[ $1 ]] && waittime=$1; while true; do sudo service tor restart && sudo service privoxy restart && echo "sleeping for $waittime" && sleep $waittime ; done }
 
 
 
