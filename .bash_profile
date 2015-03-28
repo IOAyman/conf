@@ -6,21 +6,28 @@ export PS1='\[\033[01;32m\]\w\[\033[00m\] -> '
 export HISTCONTROL=ignoreboth
 
 # CMDs to ignore as well
-export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit:powertop*:drSetCPUGov*:drBlock*:welcomeback*:drloop*:drdesktop*"
+export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit*:powertop*:drSetCPUGov*:drBlock*:welcomeback*:drloop*:drdesktop*:drUpgrade*"
 
 # virtualenvwrapper config
 export WORKON_HOME="~/.virtualenvs"
-if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then . /usr/local/bin/virtualenvwrapper.sh; fi
+[[ -f /usr/local/bin/virtualenvwrapper.sh ]] && . /usr/local/bin/virtualenvwrapper.sh
 
 #JDK8
 # Now disabled cuz it's already at /etc/profile
-#if [ -d /opt/jdk8 ]; then export JAVA_HOME='/opt/jdk8' && export PATH=/opt/jdk8/bin:$PATH; fi
+#[[ -d /opt/jdk8 ]] && export JAVA_HOME=/opt/jdk8 && export PATH=$JAVA_HOME/bin:$PATH
+
+#glassfish
+[[ -d /opt/glassfish4 ]] && export PATH=/opt/glassfish4/bin:$PATH && export DERBY_HOME=/opt/glassfish4/javadb
 
 #mvn
-if [ -d /opt/maven3 ]; then export PATH=/opt/maven3/bin:$PATH ; fi
+# Now disabled cuz it's already at /etc/profile
+#[[ -d /opt/maven3 ]] && export M2_HOME=/opt/maven3 && export PATH=$M2_HOME/bin:$PATH
+
+#mongo
+[[ -d /opt/mongodb/bin ]] && export PATH=/opt/mongodb/bin:$PATH
 
 # aliases
-if [ -f ~/.bash_aliases ]; then . ~/.bash_aliases; fi
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 
 ###############   Funcs   ########################################
 
@@ -44,8 +51,13 @@ drBlock() { sudo ngrep -i -d any -q -K 15 "`cat ~/.deny`";}
 
 drloop() { waittime=60 ; [[ $1 ]] && waittime=$1; while true; do sudo service tor restart && sudo service privoxy restart && echo "sleeping for $waittime" && sleep $waittime ; done }
 
+drUpgrade(){ local wd=`pwd`;if [ -d ~/.vim ];then cd ~/.vim/bundle/vim-surround && git pull origin;cd ~/.vim/bundle/python-mode && git pull origin;cd ~/.vim/bundle/vim-powerline && git pull origin;cd ~/.vim/bundle/ctrlp.vim && git pull origin;fi;sudo aptitude update && sudo aptitude dist-upgrade;cd $wd;}
+
+drflex() { [[ $# -gt 0 ]] && local readonly file=$1 || file=testing; cd ~/flex && vim $file.l && flex -o $file.c $file.l && gcc -o $file $file.c && ./$file
+}
 
 
 if [ -a ~/.welcomeback ]; then cat ~/.welcomeback && sleep .5 echo -e "\n"; fi
 if [ -f ~/.screenfetch-dev ]; then ~/.screenfetch-dev; fi
 echo -e "\n"
+

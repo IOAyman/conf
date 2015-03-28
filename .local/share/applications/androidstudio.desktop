@@ -2,7 +2,7 @@
 Name=Android Studio
 Comment=
 Exec=/home/linuxer/Data/Develop/.workingWith/android-studio/bin/studio.sh
-Icon=/home/linuxer/Data/Develop/.workingWith/android-studio/bin/idea.png
+Icon=/home/linuxer/Data/Develop/.workingWith/android-studio/bin/studio.png
 #Terminal=false
 Type=Application
 Categories=Development;
