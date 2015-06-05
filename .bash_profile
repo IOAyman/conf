@@ -17,7 +17,7 @@ export WORKON_HOME="~/.virtualenvs"
 #[[ -d /opt/jdk8 ]] && export JAVA_HOME=/opt/jdk8 && export PATH=$JAVA_HOME/bin:$PATH
 
 #glassfish
-[[ -d /opt/glassfish4 ]] && export PATH=/opt/glassfish4/bin:$PATH && export DERBY_HOME=/opt/glassfish4/javadb
+[[ -d /opt/glassfish ]] && export PATH=/opt/glassfish/bin:$PATH && export DERBY_HOME=/opt/glassfish/javadb
 
 #mvn
 # Now disabled cuz it's already at /etc/profile
@@ -25,6 +25,12 @@ export WORKON_HOME="~/.virtualenvs"
 
 #mongo
 [[ -d /opt/mongodb/bin ]] && export PATH=/opt/mongodb/bin:$PATH
+
+#andy tools
+[[ -d ~/Data/Develop/.workingWith/sdk ]] && export PATH=~/Data/Develop/.workingWith/sdk/tools:~/Data/Develop/.workingWith/sdk/platform-tools:$PATH
+
+#free-pascal
+[[ -d ~/.fpc264 ]] && export PATH=~/.fpc264/bin:$PATH
 
 # aliases
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
