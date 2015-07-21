@@ -26,6 +26,9 @@ export WORKON_HOME="~/.virtualenvs"
 #mongo
 [[ -d /opt/mongodb/bin ]] && export PATH=/opt/mongodb/bin:$PATH
 
+#nodejs
+[[ -d /opt/nodejs ]] && export PATH=/opt/nodejs/bin:$PATH && export NPM_MODULES=/opt/nodejs/lib/node_modules && export NODE_PATH=/opt/nodejs:$NPM_MODULES
+
 #andy tools
 [[ -d ~/Data/Develop/.workingWith/sdk ]] && export PATH=~/Data/Develop/.workingWith/sdk/tools:~/Data/Develop/.workingWith/sdk/platform-tools:$PATH
 
