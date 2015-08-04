@@ -14,6 +14,7 @@ inoremap { {}<esc>i
 inoremap [ []<esc>i
 inoremap ' ''<esc>i
 inoremap " ""<esc>i
+inoremap ` ``<esc>i
 " PHP HTML
 inoremap <? <?php  ?><esc>i<left><left>
 inoremap </ </ ><esc>i<left>
