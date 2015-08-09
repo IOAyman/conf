@@ -60,7 +60,7 @@ drBlock() { sudo ngrep -i -d any -q -K 15 "`cat ~/.deny`";}
 
 drloop() { waittime=60 ; [[ $1 ]] && waittime=$1; while true; do sudo service tor restart && sudo service privoxy restart && echo "sleeping for $waittime" && sleep $waittime ; done }
 
-drUpgrade(){ if [ -d ~/.vim ];then pushd ~/.vim/bundle/vim-surround && git pull origin;cd ~/.vim/bundle/python-mode && git pull origin;cd ~/.vim/bundle/vim-powerline && git pull origin;cd ~/.vim/bundle/ctrlp.vim && git pull origin;fi;popd;sudo aptitude update && sudo aptitude dist-upgrade '$@';}
+drUpgrade(){ args=$@ ;if [ -d ~/.vim ];then pushd ~/.vim/bundle/vim-surround &>/dev/null && git pull origin;cd ~/.vim/bundle/python-mode && git pull origin;cd ~/.vim/bundle/vim-powerline && git pull origin;cd ~/.vim/bundle/ctrlp.vim && git pull origin;fi;popd &>/dev/null;sudo aptitude update && sudo aptitude dist-upgrade $args;}
 
 drflex() { [[ $# -gt 0 ]] && local readonly file=$1 || file=testing; cd ~/flex && vim $file.l && flex -o $file.c $file.l && gcc -o $file $file.c && ./$file
 }
