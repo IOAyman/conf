@@ -10,7 +10,8 @@ export HISTIGNORE="ls:ll:clear:cd:cd :sudo su:exit*:powertop*:drSetCPUGov*:drBlo
 
 # virtualenvwrapper config
 export WORKON_HOME="~/.virtualenvs"
-[[ -f /usr/local/bin/virtualenvwrapper.sh ]] && . /usr/local/bin/virtualenvwrapper.sh
+#[[ -f /usr/local/bin/virtualenvwrapper.sh ]] && . /usr/local/bin/virtualenvwrapper.sh   #ubuntu-based
+[[ -f /usr/bin/virtualenvwrapper.sh ]] && . /usr/bin/virtualenvwrapper.sh  #fedora
 
 #JDK8
 # Now disabled cuz it's already at /etc/profile
@@ -21,7 +22,7 @@ export WORKON_HOME="~/.virtualenvs"
 
 #mvn
 # Now disabled cuz it's already at /etc/profile
-#[[ -d /opt/maven3 ]] && export M2_HOME=/opt/maven3 && export PATH=$M2_HOME/bin:$PATH
+[[ -d /opt/maven3 ]] && export M2_HOME=/opt/maven3 && export PATH=$M2_HOME/bin:$PATH
 
 #mongo
 [[ -d /opt/mongodb/bin ]] && export PATH=/opt/mongodb/bin:$PATH
@@ -37,6 +38,9 @@ export WORKON_HOME="~/.virtualenvs"
 
 # aliases
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+
+# composer.phar
+[[ -d ~/compilethegoodness/composer/ ]] && export PATH=~/compilethegoodness/composer:$PATH
 
 ###############   Funcs   ########################################
 
