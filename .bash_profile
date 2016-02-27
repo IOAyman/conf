@@ -69,8 +69,10 @@ drUpgrade(){ args=$@ ;if [ -d ~/.vim ];then pushd ~/.vim/bundle/vim-surround &>/
 drflex() { [[ $# -gt 0 ]] && local readonly file=$1 || file=testing; cd ~/flex && vim $file.l && flex -o $file.c $file.l && gcc -o $file $file.c && ./$file
 }
 
+killhashbang() { kill -9 `ps aux |grep -v grep |grep -E ssh.*hashbang |head -1 |awk '{print $2}'` 2>/dev/null; }
 
-if [ -a ~/.welcomeback ]; then cat ~/.welcomeback && sleep .5 echo -e "\n"; fi
-if [ -f ~/.screenfetch-dev ]; then ~/.screenfetch-dev; fi
+
+[[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && [[ -z $TMUX ]] && fortune | cowsay
+[[ -f ~/.screenfetch-dev ]] && ~/.screenfetch-dev
 echo -e "\n"
 
