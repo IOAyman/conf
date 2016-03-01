@@ -10,4 +10,4 @@ alias iotop='sudo iotop'
 alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
 
 # Conditional
-[[ -x `which gifi 2>/dev/null` ]] && [[ -x `which npm 2>/dev/null` ]] && alias npm=gifi
+#[[ -x `which gifi 2>/dev/null` ]] && [[ -x `which npm 2>/dev/null` ]] && alias npm=gifi

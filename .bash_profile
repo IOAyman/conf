@@ -1,6 +1,12 @@
 # guess im aware of my name or how it is spelled!
 # i want a shorter prompt
-export PS1='\[\033[01;32m\]\w\[\033[00m\] -> '
+export __BODL_ON='\033[1m'
+export __BOLD_OFF='\033[21m'
+export __ITALIC_ON='\E[3m'
+export __ITALIC_OFF='\E[23m'
+export __COLOR='\[\033[01;36m\]'
+export __COLOR_RESET=`tput sgr0`
+export PS1=${__COLOR}${__BOLD_ON}'\w ▬► '${__BOLD_OFF}${__COLOR_RESET}
 
 # ignore both duplicates as well as lines starting with space
 export HISTCONTROL=ignoreboth
@@ -47,7 +53,7 @@ export WORKON_HOME="~/.virtualenvs"
 # Duck it up :D
 ddg() { local readonly ddg="ddg.gg/?q="; local readonly ff="firefox"; if [[ $# -ne 0 ]]; then $ff -new-tab $ddg${1//[^a-zA-Z0-9]/+}; else echo "Usage: $0 \"[seach term]\""; fi }
 
-drWhereAmI() { local readonly src='/home/linuxer/Data/Develop/dot.py/Fast-pyTools/whereami.py'; [[ -f $src ]] && python2 $src; }
+drWhereAmI() { local readonly src='~/Develop/dot.py/pytools/whereami.py'; [[ -f $src ]] && python2 $src; }
 
 # -n  Dont resolve hostnames  (speeds up the process)
 drGrepConnections() { local readonly listOF="lsof -i -Pnl"; echo -e "\n Usage: drGrepConnections [processName]\n"; if [[ $# -gt 0 ]]; then echo -e "Connections count: `$listOF | grep -e $1 | wc -l`\n" && $listOF | grep -e $1; else echo -e "Connections count: `$listOF | wc -l`\n" && $listOF; fi }
@@ -58,7 +64,7 @@ drSetCPUGov() { if [[ $1 ]]; then for i in 0 1 2 3; do sudo cpufreq-set -c $i -g
 
 drLen() { [[ $# -gt 0 ]] && python -c "print ( len ( '$*' ) )" || echo "EMPTY STRING!"; }
 
-drDefine() { local readonly src=~/Develop/dot.py/Fast-pyTools/define.py ; [[ $# -gt 0 && -f $src ]] && python2 $src $1 || echo "Err!"; }
+#drDefine() { local readonly src= ; [[ $# -gt 0 && -x $src ]] && python2 $src $1 || echo "Err!"; }
 
 drBlock() { sudo ngrep -i -d any -q -K 15 "`cat ~/.deny`";}
 
@@ -66,7 +72,7 @@ drloop() { waittime=60 ; [[ $1 ]] && waittime=$1; while true; do sudo service to
 
 drUpgrade(){ args=$@ ;if [ -d ~/.vim ];then pushd ~/.vim/bundle/vim-surround &>/dev/null && git pull origin;cd ~/.vim/bundle/python-mode && git pull origin;cd ~/.vim/bundle/vim-powerline && git pull origin;cd ~/.vim/bundle/ctrlp.vim && git pull origin;fi;popd &>/dev/null;sudo aptitude update && sudo aptitude dist-upgrade $args;}
 
-drflex() { [[ $# -gt 0 ]] && local readonly file=$1 || file=testing; cd ~/flex && vim $file.l && flex -o $file.c $file.l && gcc -o $file $file.c && ./$file
+drflex() { [[ $# -gt 0 ]] && local readonly file=$1 || file=testing; pushd ~/flex && vim $file.l && flex -o $file.c $file.l && gcc -o $file $file.c && ./$file; popd
 }
 
 killhashbang() { kill -9 `ps aux |grep -v grep |grep -E ssh.*hashbang |head -1 |awk '{print $2}'` 2>/dev/null; }
@@ -75,4 +81,3 @@ killhashbang() { kill -9 `ps aux |grep -v grep |grep -E ssh.*hashbang |head -1 |
 [[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && [[ -z $TMUX ]] && fortune | cowsay
 [[ -f ~/.screenfetch-dev ]] && ~/.screenfetch-dev
 echo -e "\n"
-
