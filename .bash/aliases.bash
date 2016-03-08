@@ -11,4 +11,4 @@ alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip
 
 # Conditional
 #[[ -x `which gifi 2>/dev/null` ]] && [[ -x `which npm 2>/dev/null` ]] && alias npm=gifi
-alias khen9oni='while [[ -z `ping -w3 google.com 2>/dev/null` ]]; do sleep 5s; done; notify-send --icon=face-laugh "LHMD" "O2 restored"'
+alias khen9oni='while [[ -z `ping -w3 ddg.gg 2>/dev/null` ]]; do sleep 5s; done; notify-send --icon=face-laugh "LHMD" "O2 restored"'
