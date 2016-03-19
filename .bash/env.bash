@@ -28,3 +28,6 @@ export WORKON_HOME="~/.virtualenvs"
 
 #composer
 [[ -d ~/compilethegoodness/composer/ ]] && export PATH=~/compilethegoodness/composer:$PATH
+
+#sublime
+[[ -d /opt/sublime3 ]] && alias subl='/opt/sublime3/sublime_text'
