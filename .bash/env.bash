@@ -31,3 +31,7 @@ export WORKON_HOME="~/.virtualenvs"
 
 #sublime
 [[ -d /opt/sublime3 ]] && alias subl='/opt/sublime3/sublime_text'
+
+#firefox-dev
+[[ -d /opt/ffd ]] && alias firefox-dev='/opt/ffd/firefox -P --no-remote'
+
