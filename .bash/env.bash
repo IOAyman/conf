@@ -35,3 +35,6 @@ export WORKON_HOME="~/.virtualenvs"
 #firefox-dev
 [[ -d /opt/ffd ]] && alias firefox-dev='/opt/ffd/firefox -P --no-remote'
 
+#autojump
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history -a"
+[[ -f /etc/profile.d/autojump.sh ]] && . /etc/profile.d/autojump.sh
