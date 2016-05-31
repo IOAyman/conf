@@ -21,13 +21,15 @@ export WORKON_HOME="~/.virtualenvs"
 [[ -d /opt/nodejs ]] && export PATH=/opt/nodejs/bin:$PATH && export NPM_MODULES=/opt/nodejs/lib/node_modules && export NODE_PATH=/opt/nodejs:$NPM_MODULES
 
 #andy tools
-[[ -d ~/Data/Develop/.workingWith/sdk ]] && export PATH=~/Data/Develop/.workingWith/sdk/tools:~/Data/Develop/.workingWith/sdk/platform-tools:$PATH
+[[ $IDEs ]] && \
+[[ -d $IDEs/sdk ]] && export PATH=$IDEs/sdk/tools:$IDEs/sdk/platform-tools:$PATH
 
 #free-pascal
 [[ -d ~/.fpc264 ]] && export PATH=~/.fpc264/bin:$PATH
 
 #composer
-[[ -d ~/compilethegoodness/composer/ ]] && export PATH=~/compilethegoodness/composer:$PATH
+[[ $COMPILESCR ]] && \
+[[ -d $COMPILESCR/composer/ ]] && export PATH=$COMPILESCR/composer:$PATH
 
 #sublime
 [[ -d /opt/sublime3 ]] && alias subl='/opt/sublime3/sublime_text'
