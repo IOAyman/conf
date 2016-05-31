@@ -2,7 +2,7 @@
 ddg() {
     local readonly ddg="https://ddg.gg/?q=";
     local readonly ff='`which firefox 2>/dev/null` -P --no-profile';
-    [[ $# -ne 0 ]] && $ff -new-tab $ddg${1//[^a-zA-Z0-9]/+} || echo "Usage: $0 \"[seach term]\"";
+    [[ $# -ne 0 ]] && $ff --new-tab $ddg${1//[^a-zA-Z0-9]/+} || echo "Usage: $0 \"[seach term]\"";
 }
 
 drWhereAmI() {
@@ -57,9 +57,20 @@ drUpgrade(){
         cd ~/.vim/bundle/ctrlp.vim && git pull origin
     fi
     popd &>/dev/null
-    #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo pip install --upgrade pip youtube-dl haxor-news
+    #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
+}
+
+playstreamingcache(){
+    local readonly n=$#
+    [[ $n -lt 1 || $n = 2 || $n -gt 3 ]] && echo "Usage: $0  name [season episode]" && return 1
+    local readonly name=$1
+    local readonly season=$2
+    local readonly episode=$3 
+    [[ $STREAMING ]] || \
+    echo "Streaming dir not found!" || return 1 && \
+    vlc "`find $STREAMING | grep -iE ".*$name.*s$season.*(i|v|4)$" |grep -i E$episode`" &>/dev/null &
 }
 
 killhashbang() { kill -9 `ps aux |grep -v grep |grep -E ssh.*hashbang |head -1 |awk '{print $2}'` 2>/dev/null; }
