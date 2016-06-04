@@ -70,7 +70,7 @@ playstreamingcache(){
     local readonly episode=$3 
     [[ $STREAMING ]] || \
     echo "Streaming dir not found!" || return 1 && \
-    vlc "`find $STREAMING | grep -iE ".*$name.*s$season.*(i|v|4)$" |grep -i E$episode`" &>/dev/null &
+    vlc "`find $STREAMING | grep -iE ".*$name(.*s$season)?.*(i|v|4)$" |grep -i E$episode`" &>/dev/null &
 }
 
 killhashbang() { kill -9 `ps aux |grep -v grep |grep -E ssh.*hashbang |head -1 |awk '{print $2}'` 2>/dev/null; }
