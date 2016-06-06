@@ -1,5 +1,4 @@
-# guess im aware of my name or how it is spelled!
-# i want a shorter prompt
+# https://wiki.archlinux.org/index.php/Bash/Prompt_customization#Common_capabilities
 __BODL_ON='\033[1m'
 __BOLD_OFF='\033[21m'
 __ITALIC_ON='\E[3m'

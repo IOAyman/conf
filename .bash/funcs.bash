@@ -80,3 +80,8 @@ function khen9oni() {
     notify-send --icon=face-laugh "LHMD" "O2 restored";
     [[ `which espeak 2>/dev/null` ]] && espeak -p99 -s200 "internet restored"
 }
+
+dmenv() {
+    [[ `which docker-machine 2>/dev/null` ]] || echo "docker-machine not found!" || return 1
+    eval `docker-machine env $@`
+}
