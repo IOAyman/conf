@@ -31,6 +31,14 @@ export WORKON_HOME="~/.virtualenvs"
 [[ $COMPILESCR ]] && \
 [[ -d $COMPILESCR/composer/ ]] && export PATH=$COMPILESCR/composer:$PATH
 
+#golang
+[[ $COMPILESCR ]] && \
+[[ -d $COMPILESCR/go ]] && \
+    export GOROOT=$COMPILESCR/go && \
+    export GOPATH=~/.golibs && \
+    mkdir -p $GOPATH && \
+    export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+
 #sublime
 [[ -d /opt/sublime3 ]] && alias subl='/opt/sublime3/sublime_text'
 

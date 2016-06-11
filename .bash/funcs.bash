@@ -57,6 +57,7 @@ drUpgrade(){
         cd ~/.vim/bundle/ctrlp.vim && git pull origin
     fi
     popd &>/dev/null
+    [[ `which composer 2>/dev/null` ]] && composer selfupdate
     sudo pip install --upgrade pip youtube-dl haxor-news
     #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
