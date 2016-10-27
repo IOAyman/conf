@@ -15,9 +15,6 @@ export WORKON_HOME="~/.virtualenvs"
 #mongo
 [[ -d /opt/mongodb/bin ]] && export PATH=/opt/mongodb/bin:$PATH
 
-#nodejs
-[[ -d /opt/nodejs ]] && export PATH=/opt/nodejs/bin:$PATH && export NPM_MODULES=/opt/nodejs/lib/node_modules && export NODE_PATH=/opt/nodejs:$NPM_MODULES
-
 #andy tools
 [[ $IDEs ]] && \
 [[ -d $IDEs/sdk ]] && export PATH=$IDEs/sdk/tools:$IDEs/sdk/platform-tools:$PATH
@@ -29,6 +26,14 @@ export WORKON_HOME="~/.virtualenvs"
 [[ $COMPILESCR ]] && \
 [[ -d $COMPILESCR/composer/ ]] && export PATH=$COMPILESCR/composer:$PATH
 
+# NVM setup
+[[ -d $HOME/.nvm ]] \
+    && export NVM_DIR="$HOME/.nvm" \
+    && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" \
+    && nvm use default 1>/dev/null \
+    && export NPM_MODULES=$NVM_BIN/../lib/node_modules \
+    && export NODE_PATH=$NVM_BIN/..:$NPM_MODULES 1>/dev/null
+
 #golang
 [[ $COMPILESCR ]] && \
 [[ -d $COMPILESCR/go ]] && \
@@ -39,6 +44,9 @@ export WORKON_HOME="~/.virtualenvs"
 
 #sublime
 [[ -d /opt/sublime3 ]] && alias subl='/opt/sublime3/sublime_text'
+
+#vscode
+[[ -d $COMPILESCR'/vscode' ]] && alias vscode=$COMPILESCR'/vscode/bin/code'
 
 #firefox-dev
 [[ -d /opt/ffd ]] && alias firefox-dev='/opt/ffd/firefox -P --no-remote'

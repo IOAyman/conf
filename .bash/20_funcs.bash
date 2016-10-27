@@ -5,18 +5,18 @@ ddg() {
     [[ $# -ne 0 ]] && $ff --new-tab $ddg${1//[^a-zA-Z0-9]/+} || echo "Usage: $0 \"[seach term]\"";
 }
 
-drWhereAmI() {
+drwhereami() {
     [[ $PYTOOLS ]] && \
         [[ -f $PYTOOLS/whereami.py ]] && python2 $PYTOOLS/whereami.py || echo "script not found!";
 }
 
-drDefine() {
+drdefine() {
     [[ $PYTOOLS ]] && \
         [[ -f $PYTOOLS/define.py ]] && python2 $PYTOOLS/define.py || echo "script not found!";
 }
 
 # -n  Dont resolve hostnames  (speeds up the process)
-drGrepConnections() {
+drgrepconnections() {
     local readonly listOF="lsof -i -Pnl";
     echo -e "\n  Usage: drGrepConnections [processName]\n";
     if [[ $# -gt 0 ]]; then
@@ -27,28 +27,17 @@ drGrepConnections() {
     fi
 }
 
-drSetCPUGov() {
+drsetcpugov() {
     [[ $1 ]] && \
-        for i in 0 1 2 3; do sudo cpufreq-set -c $i -g $1; done \
+        for i in `cat /proc/cpuinfo |grep processor |sed s/'^processor\s:\s'//`; do sudo cpufreq-set -c $i -g $1; done \
     || cpufreq-info
 }
 
-drLen() { [[ $# -gt 0 ]] && python -c "print ( len ( '$*' ) )" || echo "EMPTY STRING!"; }
+drlen() { [[ $# -gt 0 ]] && python -c "print ( len ( '$*' ) )" || echo "EMPTY STRING!"; }
 
-drBlock() { sudo ngrep -i -d any -q -K 15 "`cat ~/.deny`";}
+drblock() { sudo ngrep -i -d any -q -K 15 "`cat ~/.deny`";}
 
-drloop() {
-    local waittime=60
-    [[ $1 ]] && waittime=$1
-    while true; do
-        sudo service tor restart
-        sudo service privoxy restart
-        echo "sleeping for $waittime"
-        sleep $waittime
-    done
-}
-
-drUpgrade(){
+drupgrade(){
     local readonly args=$@
     if [ -d ~/.vim ]; then
         pushd ~/.vim/bundle/vim-surround &>/dev/null && git pull origin
@@ -58,7 +47,8 @@ drUpgrade(){
     fi
     popd &>/dev/null
     [[ `which composer 2>/dev/null` ]] && composer selfupdate
-    sudo pip install --upgrade pip youtube-dl haxor-news
+    sudo pip install --upgrade pip youtube-dl haxor-news virtualenv
+    npm update -g how2
     #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
 }
@@ -68,7 +58,7 @@ playstreamingcache(){
     [[ $n -lt 1 || $n = 2 || $n -gt 3 ]] && echo "Usage: $0  name [season episode]" && return 1
     local readonly name=$1
     local readonly season=$2
-    local readonly episode=$3 
+    local readonly episode=$3
     [[ $STREAMING ]] || \
     echo "Streaming dir not found!" || return 1 && \
     vlc "`find $STREAMING | grep -iE ".*$name(.*s$season)?.*(i|v|4)$" |grep -i E$episode`" &>/dev/null &
@@ -85,4 +75,8 @@ function khen9oni() {
 dmenv() {
     [[ `which docker-machine 2>/dev/null` ]] || echo "docker-machine not found!" || return 1
     eval `docker-machine env $@`
+}
+
+restoreautojumpdb() {
+   [[ -f ~/.local/share/autojump/autojump.txt.bak ]] && cp ~/.local/share/autojump/autojump.txt{.bak,} || echo 'no backup'
 }
