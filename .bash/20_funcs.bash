@@ -5,16 +5,6 @@ ddg() {
     [[ $# -ne 0 ]] && $ff --new-tab $ddg${1//[^a-zA-Z0-9]/+} || echo "Usage: $0 \"[seach term]\"";
 }
 
-drwhereami() {
-    [[ $PYTOOLS ]] && \
-        [[ -f $PYTOOLS/whereami.py ]] && python2 $PYTOOLS/whereami.py || echo "script not found!";
-}
-
-drdefine() {
-    [[ $PYTOOLS ]] && \
-        [[ -f $PYTOOLS/define.py ]] && python2 $PYTOOLS/define.py || echo "script not found!";
-}
-
 # -n  Dont resolve hostnames  (speeds up the process)
 drgrepconnections() {
     local readonly listOF="lsof -i -Pnl";
@@ -79,4 +69,11 @@ dmenv() {
 
 restoreautojumpdb() {
    [[ -f ~/.local/share/autojump/autojump.txt.bak ]] && cp ~/.local/share/autojump/autojump.txt{.bak,} || echo 'no backup'
+}
+
+backupautojumpdb() {
+    j -s
+    echo -e '\nGood to go? ^C if any!'
+    read
+   [[ -f ~/.local/share/autojump/autojump.txt ]] && cp ~/.local/share/autojump/autojump.txt{,.bak} || echo 'no db'
 }

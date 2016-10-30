@@ -1,4 +1,5 @@
 # Load NVM completion
+[[ $NVM_DIR ]] && \
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 # Gulp https://github.com/gulpjs/gulp/tree/master/completion
