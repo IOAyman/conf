@@ -9,19 +9,23 @@ ddg() {
 drgrepconnections() {
     local readonly listOF="lsof -i -Pnl";
     echo -e "\n  Usage: drGrepConnections [processName]\n";
-    if [[ $# -gt 0 ]]; then
-        local readonly procs='`$listOF | grep -e $1`'
-        echo -e "Connections count: `$procs | wc -l`\n"   &&   echo $procs;
-    else
-        echo -e "Connections count: `$listOF | wc -l`\n"    &&  $listOF;
-    fi
+    if [[ $# -gt 0 ]]
+        then
+            local readonly pgm=$1
+            echo -e "Connections count: `$listOF | grep $pgm | wc -l`\n" && echo "`$listOF | grep $pgm`"
+        else
+            echo -e "Connections count: `$listOF | wc -l`\n" && $listOF
+        fi
 }
 
 drsetcpugov() {
-    [[ $1 ]] && \
-        for i in `cat /proc/cpuinfo |grep processor |sed s/'^processor\s:\s'//`; do sudo cpufreq-set -c $i -g $1; done \
+    local readonly gov=$1
+    [[ $gov ]] && \
+        for i in `cat /proc/cpuinfo |grep processor |sed s/'^processor\s:\s'//`; do sudo cpufreq-set -c $i -g $gov; done \
     || cpufreq-info
 }
+
+dropcaches() { echo 'sync && echo 3 > /proc/sys/vm/drop_caches && sync' | sudo sh; }
 
 drlen() { [[ $# -gt 0 ]] && python -c "print ( len ( '$*' ) )" || echo "EMPTY STRING!"; }
 
@@ -36,9 +40,10 @@ drupgrade(){
         cd ~/.vim/bundle/ctrlp.vim && git pull origin
     fi
     popd &>/dev/null
-    [[ `which composer 2>/dev/null` ]] && composer selfupdate
+    #[[ `which composer 2>/dev/null` ]] && composer selfupdate
+    yarn self-update
+    yarn global add how2 gulp typescript nodemon ts-node bower yo eslint tslint
     sudo pip install --upgrade pip youtube-dl haxor-news virtualenv
-    npm update -g how2
     #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
 }
@@ -72,8 +77,10 @@ restoreautojumpdb() {
 }
 
 backupautojumpdb() {
+   local readonly db=~/.local/share/autojump/autojump.txt
     j -s
+    echo -e '\n Latest backup was on: '`date -r $db '+%F %T'`
     echo -e '\nGood to go? ^C if any!'
     read
-   [[ -f ~/.local/share/autojump/autojump.txt ]] && cp ~/.local/share/autojump/autojump.txt{,.bak} || echo 'no db'
+   [[ -f $db ]] && cp $db{,.backup} || echo 'no db'
 }

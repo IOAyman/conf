@@ -1,6 +1,6 @@
 alias ls='ls --color=auto'
 alias l='ls'
-alias ll='ls -ahlF'
+alias ll='ls -ahlFtr'
 alias la='ls -a'
 alias cd\.\.='cd ..;'
 alias \.\.='cd ..;'

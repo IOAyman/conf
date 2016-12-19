@@ -47,6 +47,8 @@ fi
     && export NPM_MODULES=$NVM_BIN/../lib/node_modules \
     && export NODE_PATH=$NVM_BIN/..:$NPM_MODULES 1>/dev/null
 
+#heroku
+[[ -d /usr/local/heroku/bin ]] && PATH=/usr/local/heroku/bin:$PATH
 #autojump
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history -a"
 [[ -f /etc/profile.d/autojump.sh ]] && . /etc/profile.d/autojump.sh
