@@ -79,7 +79,7 @@ restoreautojumpdb() {
 backupautojumpdb() {
    local readonly db=~/.local/share/autojump/autojump.txt
     j -s
-    echo -e '\n Latest backup was on: '`date -r $db '+%F %T'`
+    #echo -e '\n Latest backup was on: '`date -r $db '+%F %T'`
     echo -e '\nGood to go? ^C if any!'
     read
    [[ -f $db ]] && cp $db{,.backup} || echo 'no db'
