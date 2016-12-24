@@ -73,7 +73,7 @@ dmenv() {
 }
 
 restoreautojumpdb() {
-   [[ -f ~/.local/share/autojump/autojump.txt.bak ]] && cp ~/.local/share/autojump/autojump.txt{.bak,} || echo 'no backup'
+   [[ -f ~/.local/share/autojump/autojump.txt.backup ]] && cp ~/.local/share/autojump/autojump.txt{.backup,} || echo 'no backup'
 }
 
 backupautojumpdb() {
