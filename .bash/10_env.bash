@@ -39,13 +39,19 @@ fi
 [[ $IDEs ]] && \
 [[ -d $IDEs/sdk ]] && export PATH=$IDEs/sdk/tools:$IDEs/sdk/platform-tools:$PATH
 
-# NVM setup
+#nvm
 [[ -d $HOME/.nvm ]] \
     && export NVM_DIR="$HOME/.nvm" \
     && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" \
     && nvm use default 1>/dev/null \
     && export NPM_MODULES=$NVM_BIN/../lib/node_modules \
     && export NODE_PATH=$NVM_BIN/..:$NPM_MODULES 1>/dev/null
+
+#dvm
+[[ -d $HOME/.dvm ]] \
+    && . $HOME/.dvm/dvm.sh \
+    && [[ -r $DVM_DIR/bash_completion ]] \
+    && . $DVM_DIR/bash_completion
 
 #heroku
 [[ -d /usr/local/heroku/bin ]] && PATH=/usr/local/heroku/bin:$PATH

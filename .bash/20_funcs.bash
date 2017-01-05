@@ -41,7 +41,7 @@ drupgrade(){
     fi
     popd &>/dev/null
     #[[ `which composer 2>/dev/null` ]] && composer selfupdate
-    yarn self-update
+    # yarn self-update
     yarn global add how2 gulp typescript nodemon ts-node bower yo eslint tslint
     sudo pip install --upgrade pip youtube-dl haxor-news virtualenv
     #sudo aptitude update && sudo aptitude dist-upgrade $args
