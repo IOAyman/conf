@@ -12,6 +12,7 @@ export HISTCONTROL=ignoreboth
 
 # CMDs to ignore as well
 export HISTIGNORE="l:ls:ll:clear:cd:cd :..:sudo su:exit*:powertop*:drsetcpugov*:drblock*:welcomeback*:drloop*:drdesktop*:drupgrade*:sync*"
+export HISTSIZE=1500
 
 # Load up the rest of config
 [[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/* |grep -v 'profile.bash' |sort`; do . $f; done
