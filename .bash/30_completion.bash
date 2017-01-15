@@ -72,3 +72,7 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+#rhc `rhc setup --autocomplete`
+[[ -e $HOME/.openshift/bash_autocomplete ]] && $HOME/.openshift/bash_autocomplete
+
