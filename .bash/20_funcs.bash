@@ -40,10 +40,10 @@ drupgrade(){
         cd ~/.vim/bundle/ctrlp.vim && git pull origin
     fi
     popd &>/dev/null
-    #[[ `which composer 2>/dev/null` ]] && composer selfupdate
-    # yarn self-update
+    [[ `which composer 2>/dev/null` ]] && composer selfupdate
+    #npm i -g yarn
     yarn global add how2 gulp typescript nodemon ts-node bower yo eslint tslint emoj np bunyan
-    sudo pip install --upgrade pip youtube-dl haxor-news virtualenv
+    sudo pip install --upgrade pip youtube-dl haxor-news virtualenv ansible
     #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
 }

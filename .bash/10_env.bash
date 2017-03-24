@@ -33,6 +33,9 @@ then
     #firefox-dev
     [[ -d $COMPILESCR/ffd ]] && alias firefox-dev=$COMPILESCR/'ffd/firefox -P --no-remote'
 
+    #doctl
+    [[ -d $COMPILESCR/doctl ]] && export PATH=$COMPILESCR/doctl:$PATH
+
 fi
 
 #andy tools
