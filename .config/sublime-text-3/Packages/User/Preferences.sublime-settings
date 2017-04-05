@@ -21,5 +21,6 @@
   "index_workers": 4,
   "index_exclude_patterns": ["*.log", "./node_modules/*", "./bower_components/*"],
   "scroll_speed": 1.0,
-  "scroll_past_end": true
+  "scroll_past_end": true,
+  "file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-workspace", "*.sublime-project"],
 }
