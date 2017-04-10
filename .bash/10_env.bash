@@ -36,6 +36,9 @@ then
     #doctl
     [[ -d $COMPILESCR/doctl ]] && export PATH=$COMPILESCR/doctl:$PATH
 
+    #terraform
+    [[ -d $COMPILESCR/terraform ]] && export PATH=$COMPILESCR/terraform:$PATH
+
 fi
 
 #andy tools
