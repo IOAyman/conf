@@ -39,6 +39,9 @@ then
     #terraform
     [[ -d $COMPILESCR/terraform ]] && export PATH=$COMPILESCR/terraform:$PATH
 
+    #wrk
+    [[ -d $COMPILESCR/wrk ]] && export PATH=$COMPILESCR/wrk:$PATH
+
 fi
 
 #andy tools
