@@ -1,0 +1,33 @@
+
+[user]
+   email = theycallmethedr@gmail.com
+   name = Ayman Nedjmeddine
+   username = IOAyman
+   signingkey = FC1C3E552DD1CF5C
+[core]
+   editor = vim
+   autocrlf = input
+[color]
+   ui = true
+[push]
+   default = simple
+[alias]
+   s = status
+   ss = status -s
+   a = add
+   c = commit
+   l = log --oneline --graph
+   m = merge
+   b = branch
+   d = diff
+   pl = pull -a
+   ps = push
+   ck = checkout
+   cl = clone
+   rs = reset
+   rshd = reset --hard
+[gpg]
+   program = gpg2
+[commit]
+   gpgsign = true
+
