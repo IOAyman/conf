@@ -7,15 +7,15 @@ __COLOR='\[\033[01;36m\]'
 __COLOR_RESET='\[\033[00;00m\]'
 export PS1=${__COLOR}${__BOLD_ON}'\w ▬► '${__BOLD_OFF}${__COLOR_RESET}
 
-# ignore both duplicates as well as lines starting with space
+#history
+export HISTFILE=~/.bash/history
 export HISTCONTROL=ignoreboth
-
-# CMDs to ignore as well
-export HISTIGNORE="l:ls:ll:clear:cd:cd :..:sudo su:exit*:powertop*:drsetcpugov*:drblock*:welcomeback*:drloop*:drdesktop*:drupgrade*:sync*"
+export HISTIGNORE="l:la:ls:ll:lll:cd:cd :..:sudo su:exit*:powertop*:drupgrade*:sync*"
 export HISTSIZE=1500
 
-# Load up the rest of config
-[[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/* |grep -v 'profile.bash' |sort`; do . $f; done
+#load config
+[[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/*.bash |grep -v 'profile.bash' |sort`; do . $f; done
 
+#fun
 [[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && [[ -z $TMUX ]] && fortune | cowsay
 [[ -f ~/.screenfetch-dev ]] && ~/.screenfetch-dev && echo -e "\n"
