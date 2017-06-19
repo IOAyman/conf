@@ -22,7 +22,7 @@ then
         export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
     #composer
-    [[ -d $COMPILESCR/composer/ ]] && export PATH=$COMPILESCR/composer:$PATH
+    [[ -d $COMPILESCR/composer/ ]] && [[ `which php 2>/dev/null` ]] && export PATH=$COMPILESCR/composer:$PATH
 
     #sublime
     [[ -d $COMPILESCR/sublime_text_3 ]] && alias subl=$COMPILESCR/sublime_text_3/sublime_text
@@ -69,5 +69,4 @@ export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history -a"
 [[ -f /etc/profile.d/autojump.sh ]] && . /etc/profile.d/autojump.sh
 
 #tools
-[[ $PYTOOLS ]] && \
 [[ $PYTOOLS ]] && export PATH=$PYTOOLS:$PATH
