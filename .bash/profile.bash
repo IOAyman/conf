@@ -14,7 +14,9 @@ export HISTIGNORE="l:la:ls:ll:lll:cd:cd :..:sudo su:exit*:powertop*:drupgrade*:s
 export HISTSIZE=1500
 
 #load config
+echo "loading ..."
 [[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/*.bash |grep -v 'profile.bash' |sort`; do . $f; done
+clear
 
 #fun
 [[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && [[ -z $TMUX ]] && fortune | cowsay

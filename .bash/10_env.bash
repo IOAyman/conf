@@ -56,6 +56,11 @@ fi
     && export NPM_MODULES=$NVM_BIN/../lib/node_modules \
     && export NODE_PATH=$NVM_BIN/..:$NPM_MODULES 1>/dev/null
 
+#yarn
+[[ -d $HOME/.yarn ]] && \
+[[ `which node 2>/dev/null` ]] && \
+    export PATH="$HOME/.yarn/bin:$PATH"
+
 #dvm
 [[ -d $HOME/.dvm ]] \
     && . $HOME/.dvm/dvm.sh \
