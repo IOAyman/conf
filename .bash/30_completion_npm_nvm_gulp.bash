@@ -1,3 +1,6 @@
+# NPM
+[[ `which npm 2>/dev/null` ]] && . <(npm completion)
+
 # Load NVM completion
 [[ $NVM_DIR ]] && \
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
