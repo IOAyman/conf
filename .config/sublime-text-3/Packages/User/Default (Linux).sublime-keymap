@@ -1,16 +1,24 @@
 [
-  {
-    "keys": ["ctrl+shift+1"], 
-    "command": "set_layout", 
-    "args": {"cols": [0.0, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1]] }
-  }, 
-  {
-    "keys": ["ctrl+shift+2"], 
-    "command": "set_layout", 
-    "args": {"cols": [0.0, 0.5, 1.0], "rows": [0.0, 1.0], "cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
-    } 
-  }, 
-  { "keys": ["ctrl+shift+l"], "command": "lorem_ipsum" }, 
-  { "keys": ["alt+f"], "command": "show_overlay", "args": {"overlay": "command_palette"} }, 
-  { "keys": ["alt+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} }
+	{
+		"keys": ["ctrl+shift+1"],
+		"command": "set_layout",
+		"args": {
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	},
+	{
+		"keys": ["ctrl+shift+2"],
+		"command": "set_layout",
+		"args": {
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+		}
+	},
+	{ "keys": ["ctrl+shift+l"], "command": "lorem_ipsum" },
+	{ "keys": ["alt+f"], "command": "show_overlay", "args": {"overlay": "command_palette"} },
+	{ "keys": ["alt+p"], "command": "show_overlay", "args": {"overlay": "goto", "show_files": true} },
+	{ "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
 ]

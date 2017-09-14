@@ -24,9 +24,6 @@ then
     #composer
     [[ -d $COMPILESCR/composer/ ]] && [[ `which php 2>/dev/null` ]] && export PATH=$COMPILESCR/composer:$PATH
 
-    #sublime
-    [[ -d $COMPILESCR/sublime_text_3 ]] && alias subl=$COMPILESCR/sublime_text_3/sublime_text
-
     #vscode
     [[ -d $COMPILESCR/vscode ]] && alias vscode=$COMPILESCR/vscode/bin/code
 
