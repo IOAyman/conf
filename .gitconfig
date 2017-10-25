@@ -20,12 +20,16 @@
    m = merge
    b = branch
    d = diff
+   dc = diff --cached
    pl = pull -a
    ps = push
    ck = checkout
+   cp = cherry-pick
    cl = clone
    rs = reset
    rshd = reset --hard
+   rsmx = reset --mixed
+   rb = rebase -i
 [gpg]
    program = gpg2
 [commit]
