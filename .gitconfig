@@ -30,6 +30,9 @@
    rshd = reset --hard
    rsmx = reset --mixed
    rb = rebase -i
+   st = stash
+   forget = update-index --assume-unchanged
+   unforget = update-index --no-assume-unchanged
 [gpg]
    program = gpg2
 [commit]

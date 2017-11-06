@@ -31,6 +31,7 @@
 	"scroll_past_end": true,
 	"scroll_speed": 1.0,
 	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
 	"theme": "Material-Theme-Darker.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"word_wrap": true
