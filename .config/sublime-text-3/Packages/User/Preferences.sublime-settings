@@ -5,17 +5,20 @@
   "color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
   "copy_with_empty_selection": false,
   "ensure_newline_at_eof_on_save": true,
-  "font_options": [
+  "font_options":
+  [
     "gray_antialias",
     "subpixel_antialias"
   ],
   "font_size": 10,
   "highlight_line": true,
-  "indent_guide_options": [
+  "indent_guide_options":
+  [
     "draw_normal",
     "draw_active"
   ],
-  "index_exclude_patterns": [
+  "index_exclude_patterns":
+  [
     "*.log",
     "./node_modules/*",
     "./bower_components/*"
