@@ -6,7 +6,7 @@ if [ $COMPILESCR ]
 then
 
     #JDK8
-    [[ -d $COMPILESCR/jdk8 ]] && export JAVA_HOME=$COMPILESCR/jdk8 && export PATH=$JAVA_HOME/bin:$PATH
+    [[ -d $COMPILESCR/jdk ]] && export JAVA_HOME=$COMPILESCR/jdk && export PATH=$JAVA_HOME/bin:$PATH
 
     #glassfish
     [[ -d $COMPILESCR/glassfish ]] && export PATH=$COMPILESCR/glassfish/bin:$PATH && export DERBY_HOME=$COMPILESCR/glassfish/javadb
@@ -39,6 +39,8 @@ then
     #wrk
     [[ -d $COMPILESCR/wrk ]] && export PATH=$COMPILESCR/wrk:$PATH
 
+    #exa
+    [[ -d $COMPILESCR/exa ]] && export PATH=$COMPILESCR/exa:$PATH
 fi
 
 #andy tools
