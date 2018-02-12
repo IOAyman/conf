@@ -41,6 +41,9 @@ then
 
     #exa
     [[ -d $COMPILESCR/exa ]] && export PATH=$COMPILESCR/exa:$PATH
+
+    #helm
+    [[ -d $COMPILESCR/help ]] && export PATH=$COMPILESCR/help:$PATH
 fi
 
 #andy tools
