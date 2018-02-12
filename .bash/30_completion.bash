@@ -1,6 +1,7 @@
 # k8s
 [[ `which kubectl 2>/dev/null` ]] && . <(kubectl completion bash)
 [[ `which minikube 2>/dev/null` ]] && . <(minikube completion bash)
+[[ `which helm 2>/dev/null` ]] && . <(helm completion bash)
 
 
 # doctl
