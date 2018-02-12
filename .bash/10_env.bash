@@ -43,7 +43,7 @@ then
     [[ -d $COMPILESCR/exa ]] && export PATH=$COMPILESCR/exa:$PATH
 
     #helm
-    [[ -d $COMPILESCR/help ]] && export PATH=$COMPILESCR/help:$PATH
+    [[ -d $COMPILESCR/helm ]] && export PATH=$COMPILESCR/helm:$PATH
 fi
 
 #andy tools
