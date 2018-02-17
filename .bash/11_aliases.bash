@@ -12,6 +12,7 @@ alias powertop='sudo powertop;'
 alias axel='axel -an9'
 alias iotop='sudo iotop;'
 alias sync='sudo sync;'
+alias rmr='rm -r'
 alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
 alias youtube-dlaudio='youtube-dl -c -x --audio-format=mp3 '
 [[ -x `which docker 2>/dev/null` ]] \
