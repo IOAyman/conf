@@ -1,5 +1,11 @@
 // Place your key bindings in this file to overwrite the defaults
-[{
-  "key": "alt+f",
-  "command": "workbench.action.showCommands"
-}]
+[
+  {
+    "key": "alt+p",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.action.showCommands"
+  }
+]
