@@ -15,6 +15,7 @@ alias sync='sudo sync;'
 alias rmr='rm -r'
 alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
 alias youtube-dlaudio='youtube-dl -c -x --audio-format=mp3 '
+alias vsc='vscode'
 [[ -x `which docker 2>/dev/null` ]] \
     && alias dps='docker ps' \
     && alias dpsa='docker ps -a' \
