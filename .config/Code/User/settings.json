@@ -18,7 +18,7 @@
     "workbench.statusBar.feedback.visible": false,
     "window.closeWhenEmpty": false,
     "window.enableMenuBarMnemonics": false,
-    "window.menuBarVisibility": "toggle",
+    "window.menuBarVisibility": "hidden",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "zenMode.restore": true,
@@ -32,5 +32,8 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "eslint.alwaysShowStatus": true,
-    "git.enableCommitSigning": true
+    "git.enableCommitSigning": true,
+    "git.autofetch": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "vsicons.projectDetection.autoReload": true
 }
