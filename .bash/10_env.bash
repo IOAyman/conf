@@ -42,6 +42,9 @@ then
     #exa
     [[ -d $COMPILESCR/exa ]] && export PATH=$COMPILESCR/exa:$PATH
 
+    #q
+    [[ -d $COMPILESCR/q ]] && [[ -x $COMPILESCR/q/bin/q ]] && alias q=$COMPILESCR/q/bin/q
+
     #helm
     [[ -d $COMPILESCR/helm ]] && export PATH=$COMPILESCR/helm:$PATH
 fi
