@@ -35,5 +35,6 @@
     "git.enableCommitSigning": true,
     "git.autofetch": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "vsicons.projectDetection.autoReload": true
+    "vsicons.projectDetection.autoReload": true,
+    "workbench.colorTheme": "Sahara Theme"
 }
