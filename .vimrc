@@ -3,18 +3,53 @@ let mapleader = ','
 "Automatically reload vimrc when it's saved
 "URL= http://vimbits.com/bits/128
 "au BufWritePost .vimrc so ~/.vimrc
-autocmd bufwritepost .vimrc source %
+"autocmd bufwritepost .vimrc source %
+
+
+set incsearch              " highlight match while typing search pattern
+set history=100            " set cmd/pattern history size
+set nohlsearch             " do not keep highlighting
+
+syntax on                  " enable syntax hilighing
+filetype plugin indent on  " Needed for Syntax Highlighting and stuff
+
+set grepprg=grep\ -nH\ $*
+
+
+" keep a backup when overwriting a file
+" deactivate on VMS, since it already does that
+" if has("vms")
+"   set nobackup
+" else
+"   set backup
+" endif
+
+" wrapping words in
+" curly braces
+map { i{<Esc>ea}<Esc>
+map } a}<Esc>bi{<Esc>
+" braces
+map [ i[<Esc>ea]<Esc>
+map ] a]<Esc>bi[<Esc>
+
+" window options
+set wrap
+set background=dark
+
+
+
 
 " Esc == jk
 inoremap jk <esc>
 inoremap kj <esc>
 
-inoremap ( ()<esc>i
-inoremap { {}<esc>i
-inoremap [ []<esc>i
-inoremap ' ''<esc>i
-inoremap " ""<esc>i
-inoremap ` ``<esc>i
+" inoremap ( ()<esc>i
+" inoremap { {}<esc>i
+" inoremap [ []<esc>i
+" inoremap ' ''<esc>i
+" inoremap " ""<esc>i
+" inoremap ` ``<esc>i
+
 " PHP HTML
 inoremap <? <?php  ?><esc>i<left><left>
 inoremap </ </ ><esc>i<left>
@@ -47,8 +82,8 @@ vnoremap > <gv    " -indent
 
 " Spaces are good people v:
 set tabstop=30
-set softtabstop=3 " Num of spaces for each Tab
-set shiftwidth=3  " Number of spaces for each auto-indent step
+set softtabstop=2 " Num of spaces for each Tab
+set shiftwidth=2  " Number of spaces for each auto-indent step
 set shiftround
 set expandtab
 set smarttab
@@ -83,12 +118,6 @@ highlight WhitespaceEOL ctermbg=Red guibg=Red
 match WhitespaceEOL /\s\+$/
 "autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 "au InsertLeave * match ExtraWhitespace /\s\+$/
-
-" Needed for Syntax Highlighting and stuff
-filetype on
-filetype plugin indent on
-syntax on
-set grepprg=grep\ -nH\ $*
 
 
 " Enable mouse support in console
