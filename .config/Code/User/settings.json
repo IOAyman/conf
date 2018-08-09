@@ -36,5 +36,7 @@
     "git.autofetch": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "vsicons.projectDetection.autoReload": true,
-    "workbench.colorTheme": "Sahara Theme"
+    "workbench.colorTheme": "Quiet Light",
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false
 }

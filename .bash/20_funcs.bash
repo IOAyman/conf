@@ -41,7 +41,7 @@ drupgrade(){
     fi
     popd &>/dev/null
     [[ `which php 2>/dev/null` ]] && [[ `which composer 2>/dev/null` ]] && composer selfupdate
-    npm i -g emoj nodemon #how2 gulp typescript ts-node bower yo eslint tslint np bunyan
+    #npm i -g emoj nodemon #how2 gulp typescript ts-node bower yo eslint tslint np bunyan
     sudo pip install --upgrade pip youtube-dl haxor-news virtualenv gpustat
     #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
