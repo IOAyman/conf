@@ -11,7 +11,7 @@ export PS1=${__COLOR}${__BOLD_ON}'\w`[[ -z "$(which __docker_machine_ps1 2>/dev/
 export HISTFILE=~/.bash/history
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="l:la:ls:ll:lll:cd:cd :..:sudo su:exit*:powertop*:drupgrade*:sync*"
-export HISTSIZE=1500
+export HISTSIZE=2000
 
 #load config
 [[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/*.bash |grep -v 'profile.bash' |sort`; do . $f; done
