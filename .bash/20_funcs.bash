@@ -42,7 +42,7 @@ drupgrade(){
     popd &>/dev/null
     [[ `which php 2>/dev/null` ]] && [[ `which composer 2>/dev/null` ]] && composer selfupdate
     #npm i -g emoj nodemon #how2 gulp typescript ts-node bower yo eslint tslint np bunyan
-    sudo pip install --upgrade pip youtube-dl haxor-news virtualenv gpustat
+    sudo pip install --upgrade pip youtube-dl haxor-news virtualenv virtualenvwrapper #gpustat
     #sudo aptitude update && sudo aptitude dist-upgrade $args
     sudo dnf update -y $args
 }
@@ -64,6 +64,7 @@ function khen9oni() {
     while [[ -z `ping -w3 ddg.gg 2>/dev/null` ]]; do sleep 5s; done;
     notify-send --icon=face-laugh "LHMD" "O2 restored";
     [[ `which espeak 2>/dev/null` ]] && espeak -p99 -s200 "internet restored"
+    ping analygital.com |awk '{ print $4,$6,$7,$8 }'
 }
 
 dmenv() {

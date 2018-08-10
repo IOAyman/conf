@@ -5,7 +5,7 @@ __ITALIC_ON='\E[3m'
 __ITALIC_OFF='\E[23m'
 __COLOR='\[\033[01;36m\]'
 __COLOR_RESET='\[\033[00;00m\]'
-export PS1=${__COLOR}${__BOLD_ON}'\w ▬► '${__BOLD_OFF}${__COLOR_RESET}
+export PS1=${__COLOR}${__BOLD_ON}'\w`[[ -z "$(which __docker_machine_ps1 2>/dev/null)" ]] || __docker_machine_ps1` ▬► '${__BOLD_OFF}${__COLOR_RESET}
 
 #history
 export HISTFILE=~/.bash/history
