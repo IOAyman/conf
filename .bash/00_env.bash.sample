@@ -1,0 +1,5 @@
+#export IDEs=
+#export PYTOOLS=
+#export COMPILESCR=
+#export STREAMING=
+#export WORKON_HOME=~/.virtualenvs
