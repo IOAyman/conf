@@ -18,4 +18,4 @@ export HISTSIZE=2000
 
 #fun
 [[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && [[ -z $TMUX ]] && fortune | cowsay
-[[ -f ~/.screenfetch-dev ]] && ~/.screenfetch-dev && echo -e "\n"
+# [[ -f ~/.screenfetch-dev ]] && ~/.screenfetch-dev && echo -e "\n"
