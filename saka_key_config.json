@@ -337,30 +337,36 @@
         "firstTab": [
           [
             {
-              "code": "KeyQ",
-              "key": "Q",
-              "shiftKey": true
+              "code": "Digit1",
+              "key": "1"
             }
           ],
           [
             {
-              "code": "Digit1",
-              "key": "1"
+              "code": "KeyI",
+              "key": "I",
+              "shiftKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
             }
           ]
         ],
         "lastTab": [
           [
             {
-              "code": "KeyW",
-              "key": "W",
-              "shiftKey": true
+              "code": "Digit0",
+              "key": "0"
             }
           ],
           [
             {
-              "code": "Digit0",
-              "key": "0"
+              "code": "KeyO",
+              "key": "O",
+              "shiftKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
             }
           ]
         ],
@@ -412,9 +418,12 @@
           ],
           [
             {
-              "code": "KeyI",
-              "key": "I",
-              "shiftKey": true
+              "code": "KeyQ",
+              "key": "Q",
+              "shiftKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
             }
           ]
         ],
@@ -428,9 +437,12 @@
           ],
           [
             {
-              "code": "KeyO",
-              "key": "O",
-              "shiftKey": true
+              "code": "KeyW",
+              "key": "W",
+              "shiftKey": true,
+              "ctrlKey": false,
+              "altKey": false,
+              "metaKey": false
             }
           ]
         ],
