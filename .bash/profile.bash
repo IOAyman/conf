@@ -10,12 +10,12 @@ export PS1=${__COLOR}${__BOLD_ON}'\w`[[ -z "$(which __docker_machine_ps1 2>/dev/
 #history
 export HISTFILE=~/.bash/history
 export HISTCONTROL=ignoreboth
-export HISTIGNORE="l:la:ls:ll:lll:cd:cd :..:sudo su:exit*:powertop*:drupgrade*:sync*"
+export HISTIGNORE="l:la:ls:ll:lll:cd:cd :..:sudo su:exit*:powertop*:drupgrade*:sync*:khen9oni"
 export HISTSIZE=2000
 
 #load config
 [[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/*.bash |grep -v 'profile.bash' |sort`; do . $f; done
 
 #fun
-[[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && [[ -z $TMUX ]] && fortune | cowsay
+[[ -z $TMUX ]] && [[ -x `which fortune 2>/dev/null` ]] && [[ -x `which cowsay 2>/dev/null` ]] && fortune | cowsay
 # [[ -f ~/.screenfetch-dev ]] && ~/.screenfetch-dev && echo -e "\n"
