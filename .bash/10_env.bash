@@ -36,6 +36,8 @@ then
   [[ -d $COMPILESCR/q ]] && [[ -x $COMPILESCR/q/bin/q ]] && alias q=$COMPILESCR/q/bin/q
   #helm
   [[ -d $COMPILESCR/helm ]] && export PATH=$COMPILESCR/helm:$PATH
+  #up
+  [[ -d $COMPILESCR/up ]] && export PATH=$COMPILESCR/up:$PATH
 fi
 
 #andy tools
