@@ -1,5 +1,4 @@
 {
-    "workbench.iconTheme": "vscode-icons",
     "editor.tabSize": 2,
     "editor.cursorStyle": "underline",
     "editor.wordWrap": "on",
@@ -38,5 +37,7 @@
     "vsicons.projectDetection.autoReload": true,
     "workbench.colorTheme": "Quiet Light",
     "editor.minimap.enabled": false,
-    "explorer.confirmDelete": false
+    "explorer.confirmDelete": false,
+    "workbench.tree.horizontalScrolling": true,
+    "explorer.openEditors.visible": 5
 }
