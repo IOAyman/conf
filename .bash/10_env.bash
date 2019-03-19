@@ -44,6 +44,10 @@ fi
 [[ $IDEs ]] && \
 [[ -d $IDEs/sdk ]] && export PATH=$IDEs/sdk/tools:$IDEs/sdk/platform-tools:$PATH
 
+#fzf
+[[ `which fzf 2>/dev/null` ]] \
+  && . /usr/share/fzf/shell/key-bindings.bash
+
 #nvm
 [[ -d $HOME/.nvm ]] \
   && export NVM_DIR="$HOME/.nvm" \
