@@ -39,5 +39,6 @@
     "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
     "workbench.tree.horizontalScrolling": true,
-    "explorer.openEditors.visible": 5
+    "explorer.openEditors.visible": 5,
+    "window.zoomLevel": 0
 }
