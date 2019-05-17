@@ -13,7 +13,7 @@
     "workbench.activityBar.visible": false,
     "workbench.commandPalette.preserveInput": true,
     "workbench.editor.closeOnFileDelete": false,
-    // "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": false,
     "workbench.statusBar.feedback.visible": false,
     "window.closeWhenEmpty": false,
     "window.enableMenuBarMnemonics": false,
@@ -38,9 +38,10 @@
     "workbench.colorTheme": "Material Theme Ocean",
     "editor.minimap.enabled": true,
     "explorer.confirmDelete": false,
-    "workbench.tree.horizontalScrolling": true,
+    "workbench.list.horizontalScrolling": true,
     "explorer.openEditors.visible": 5,
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {},
-    "workbench.iconTheme": "eq-material-theme-icons-ocean"
+    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "workbench.startupEditor": "welcomePage"
 }
