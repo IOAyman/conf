@@ -35,10 +35,12 @@
     "git.autofetch": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "vsicons.projectDetection.autoReload": true,
-    "workbench.colorTheme": "Quiet Light",
-    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Material Theme Ocean",
+    "editor.minimap.enabled": true,
     "explorer.confirmDelete": false,
     "workbench.tree.horizontalScrolling": true,
     "explorer.openEditors.visible": 5,
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "workbench.colorCustomizations": {},
+    "workbench.iconTheme": "eq-material-theme-icons-ocean"
 }
