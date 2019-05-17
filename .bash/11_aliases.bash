@@ -16,7 +16,6 @@ alias rmr='rm -r'
 alias cat='bat'
 alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip -selection clipboard '
 alias youtube-dlaudio='youtube-dl -c -x --audio-format=mp3 --embed-thumbnail '
-alias vsc='vscode'
 [[ -x `which docker 2>/dev/null` ]] \
     && alias dps='docker ps' \
     && alias dpsa='docker ps -a' \
