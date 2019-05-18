@@ -3,15 +3,22 @@
 """"""""""""""""""""""""""""
 let mapleader = ','
 
-"Automatically reload vimrc when it's saved
+" auto-reload .vimrc on save
 au BufWritePost .vimrc so ~/.vimrc
 autocmd BufWritePost .vimrc source %
 
 " VIM-PLUG
 " DOCS https://github.com/junegunn/vim-plug#usage
-" curl -fsSLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-call plug#begin('~/.vim/plugged')
+" auto-install if missing
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source ~/.vimrc
+endif
+" do magic
+call plug#begin('~/.vim/bundle')
 " MAKE SURE OF USING SINGLE QUOTES
+Plug 'ctrlpvim/ctrlp.vim', { 'on': ['CtrlP','CtrlPBuffer','CtrlPMixed'] }
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 call plug#end()  " will auto-init syntax & plugin system
 
 
@@ -141,9 +148,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " go to the first non-blank character
 map 0 ^
 " save file
-map <leader>w <esc>:call CleanExtraSpaces()<cr>:w<cr>
+noremap <leader>w <esc>:call CleanExtraSpaces()<cr>:w<cr>
 " quite file
-map <leader>q <esc>:q<CR>
+noremap <leader>q <esc>:q<CR>
 
 " Better indentation shortcut
 vnoremap <tab> >gv
@@ -212,3 +219,36 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+
+""""""""""""""""""""""""""""
+"" PLUGIN CONFIGURATION
+""""""""""""""""""""""""""""
+" ctrlp         https://github.com/ctrlpvim/ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" python-mode   https://github.com/python-mode/python-mode/blob/develop/doc/pymode.txt
+let g:pymode=1                         " turn it on
+let g:pymode_python = 'python3'        " python version
+let g:pymode_trim_whitespaces = 1      " trim white space on save
+let g:pymode_indent = 1                " PEP8 indent
+let g:pymode_doc = 1                   " turns on the documentation script 
+let g:pymode_virtualenv = 1            " enable automatic virtualenv detection
+let g:pymode_breakpoint = 1            " enable BreakPoint funcionality
+let g:pymode_breakpoint_bind = '<leader>b'  " keybind breakpoint
+"let g:pymode_breakpoint_cmd = ''      " manually set breakpoint command (leave empty for automatic detection)
+let g:pymode_lint = 0                  " trun on/off code checking
+let g:pymode_lint_on_fly = 1           " lint on the fly
+let g:pyomde_lint_message = 1          " show error message if cursor placed at the error 
+let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'pylint'] " default code checkers 
+let g:pymode_syntax = 1                " activate pymode syntax 
+let g:pymode_syntax_all = 1            " enable all highlights
+let g:pymode_rope = 0                  " deactivate rope
+" let g:pymode_rope_completion = 1
+" let g:pymode_rope_completion_on_dot = 1
+" let g:pymode_rope_completion_bind = '<C-Space>'
+" let g:pymode_rope_autoimport = 1
+" let g:pymode_rope_show_doc_bind = '<Leader>D'
+" let g:pymode_rope_goto_definition_bind = '<Leader>g'
+" let g:pymode_rope_lookup_project = 0
