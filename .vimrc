@@ -20,6 +20,8 @@ call plug#begin('~/.vim/bundle')
 Plug 'ctrlpvim/ctrlp.vim', { 'on': ['CtrlP','CtrlPBuffer','CtrlPMixed'] }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'junegunn/goyo.vim'
+Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'airblade/vim-gitgutter'
 call plug#end()  " will auto-init syntax & plugin system
 
 
@@ -258,3 +260,17 @@ let g:pymode_rope = 0                  " deactivate rope
 noremap <M-z> :Goyo<cr>
 let g:goyo_width=100
 let g:goyo_height='90%'
+
+" vim-gutter  https://github.com/airblade/vim-gitgutter
+set updatetime=100                     " refresh delay in ms
+let g:gitgutter_max_signs = 500        " do not show signs for buffers with +xxx changes
+" jumping between hunks
+nmap gn <Plug>GitGutterNextHunk
+nmap gp <Plug>GitGutterPrevHunk
+" staging hunks
+nmap gha <Plug>GitGutterStageHunk
+nmap ghu <Plug>GitGutterUndoHunk
+" preview hunks
+nmap ghp <Plug>GitGutterPreviewHunk
+" folding hunks
+nmap gf :GitGutterFold<cr>
