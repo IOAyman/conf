@@ -26,6 +26,7 @@ Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
+Plug 'vim-syntastic/syntastic'
 call plug#end()  " will auto-init syntax & plugin system
 
 
@@ -309,3 +310,16 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " mapping to toggle tree
 map <leader>wt :NERDTreeToggle<cr>
+
+" syntastic     https://github.com/vim-syntastic/syntastic
+let g:syntastic_always_populate_loc_list = 1            " always populate the error list
+let g:syntastic_auto_loc_list = 1                       " auto-open list
+let g:syntastic_check_on_open = 1                       " check on open
+let g:syntastic_check_on_wq = 1                         " check on save and quit
+let g:syntastic_aggregate_errors = 1                    " display errors form all checkers when there are multiple ones
+let g:syntastic_javascript_checkers = ['eslint']        " requires npm i -g eslint
+let g:syntastic_javascript_eslint_exec = 'eslint_d'     " requires npm i -g eslint_d for much faster checks
+" Autofix entire buffer with eslint_d:
+nnoremap <leader>ssf mF:%!eslint_d --stdin --fix-to-stdout<CR>`F
+" Autofix visual selection with eslint_d:
+vnoremap <leader>ssf :!eslint_d --stdin --fix-to-stdout<CR>gv
