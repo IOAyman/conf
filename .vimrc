@@ -19,7 +19,7 @@ call plug#begin('~/.vim/bundle')
 " MAKE SURE OF USING SINGLE QUOTES
 Plug 'ctrlpvim/ctrlp.vim', { 'on': ['CtrlP','CtrlPBuffer','CtrlPMixed'] }
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'on': ['Goyo'] }
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
