@@ -5,7 +5,7 @@ let mapleader = ','
 
 " auto-reload .vimrc on save
 au BufWritePost .vimrc so ~/.vimrc
-autocmd BufWritePost .vimrc source %
+autocmd BufWritePost .vimrc source % | echo "Reloaded ~/.vimrc"
 
 " VIM-PLUG
 " DOCS https://github.com/junegunn/vim-plug#usage
