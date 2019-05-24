@@ -24,6 +24,8 @@ Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'xuyuanp/nerdtree-git-plugin'
 call plug#end()  " will auto-init syntax & plugin system
 
 
@@ -298,3 +300,12 @@ let g:airline#extensions#whitespace#enabled = 1         " whitespace count
 
 " vim-airline-themes    https://github.com/vim-airline/vim-airline-themes
 "let g:airline_theme = 'solarized'
+
+" nerdtree     https://github.com/scrooloose/nerdtree
+autocmd StdinReadPre * let s:std_in=1
+" open tree if vim starts-up with no files open
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" close vim if the only window left is the tree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" mapping to toggle tree
+map <leader>wt :NERDTreeToggle<cr>
