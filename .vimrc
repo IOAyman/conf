@@ -142,6 +142,15 @@ map <leader>tc :tabclose<cr>
 map <leader>tt :tabnext<cr>
 map <leader>tm :tabmove<cr>
 
+" managing splits
+nmap <leader>ws  :split<cr>
+nmap <leader>wv  :vsplit<cr>
+nmap wl <c-w>l
+nmap wh <c-w>h
+nmap wj <c-w>j
+nmap wk <c-w>k
+nmap wx <c-w>x
+
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
