@@ -22,6 +22,8 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'junegunn/goyo.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 call plug#end()  " will auto-init syntax & plugin system
 
 
@@ -274,3 +276,16 @@ nmap ghu <Plug>GitGutterUndoHunk
 nmap ghp <Plug>GitGutterPreviewHunk
 " folding hunks
 nmap gf :GitGutterFold<cr>
+
+" vim-airline  https://github.com/airblade/vim-gitgutter
+let g:airline#extensions#tabline#formatter = 'default'  " format file paths in tabs and current buffer in the upper right
+let g:airline#extensions#whitespace#enabled = 1         " whitespace count
+"let g:airline_statusline_ontop = 1                      " move the status bar to the top
+"let g:airline#extensions#tabline#enabled = 1            " enable cooler tabs
+"let g:airline#extensions#tabline#left_sep = ' '         " tab separator
+"let g:airline#extensions#tabline#left_alt_sep = '|'     " tab separator
+" customize sections        https://github.com/vim-airline/vim-airline#fine-tuned-configuration
+" customize accent colors   https://github.com/vim-airline/vim-airline/issues/299#issuecomment-25772886
+
+" vim-airline-themes    https://github.com/vim-airline/vim-airline-themes
+"let g:airline_theme = 'solarized'
