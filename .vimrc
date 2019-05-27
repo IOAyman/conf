@@ -3,10 +3,6 @@
 """"""""""""""""""""""""""""
 let mapleader = ','
 
-" auto-reload .vimrc on save
-au BufWritePost .vimrc so ~/.vimrc
-autocmd BufWritePost .vimrc source % | echo "Reloaded ~/.vimrc"
-
 " VIM-PLUG
 " DOCS https://github.com/junegunn/vim-plug#usage
 " auto-install if missing
@@ -91,6 +87,18 @@ set grepprg=grep\ -nH\ $*  " search program
 " Visual mode pressing * or # searches for the current selection
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
+
+
+""""""""""""""""""""""""""""
+"" AUTO-X
+""""""""""""""""""""""""""""
+
+" auto-reload .vimrc on save
+autocmd BufWritePost .vimrc source ~/.vimrc
+autocmd BufWritePost .vimrc source % | echo "Reloaded ~/.vimrc"
+
+" auto-reload tmux config on save
+autocmd BufWritePost .tmux.conf silent !tmux source-file ~/.tmux.conf && tmux display-message "Reloaded\!"
 
 
 """"""""""""""""""""""""""""
