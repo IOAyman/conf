@@ -36,7 +36,7 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "vsicons.projectDetection.autoReload": true,
     "workbench.colorTheme": "Material Theme Ocean",
-    "editor.minimap.enabled": true,
+    "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
     "workbench.list.horizontalScrolling": true,
     "explorer.openEditors.visible": 5,
