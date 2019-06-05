@@ -23,6 +23,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'vim-syntastic/syntastic'
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()  " will auto-init syntax & plugin system
 
 
