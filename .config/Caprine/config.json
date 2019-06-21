@@ -9,6 +9,8 @@
 		"width": 1049,
 		"height": 869
 	},
+	"menuBarMode": false,
+	"hideDockIcon": false,
 	"alwaysOnTop": false,
 	"bounceDockOnMessage": false,
 	"showUnreadBadge": true,
@@ -28,5 +30,6 @@
 	"notificationsMuted": false,
 	"hardwareAcceleration": true,
 	"quitOnWindowClose": false,
-	"keepMeSignedIn": true
+	"keepMeSignedIn": true,
+	"autoplayVideos": false
 }
