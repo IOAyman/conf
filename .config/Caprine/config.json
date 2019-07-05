@@ -1,6 +1,6 @@
 {
 	"followSystemAppearance": false,
-	"darkMode": true,
+	"darkMode": false,
 	"vibrancy": "none",
 	"zoomFactor": 1.1,
 	"lastWindowState": {
@@ -10,13 +10,15 @@
 		"height": 870
 	},
 	"menuBarMode": false,
-	"hideDockIcon": false,
+	"showDockIcon": true,
+	"showTrayIcon": true,
 	"alwaysOnTop": false,
 	"bounceDockOnMessage": false,
 	"showUnreadBadge": true,
 	"showMessageButtons": true,
 	"launchMinimized": false,
 	"flashWindowOnMessage": true,
+	"notificationMessagePreview": true,
 	"block": {
 		"chatSeen": true,
 		"typingIndicator": false,
@@ -31,5 +33,6 @@
 	"hardwareAcceleration": true,
 	"quitOnWindowClose": false,
 	"keepMeSignedIn": true,
-	"autoplayVideos": false
+	"autoplayVideos": false,
+	"hideDockIcon": false
 }
