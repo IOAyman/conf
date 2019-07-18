@@ -43,5 +43,6 @@
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {},
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
-    "workbench.startupEditor": "welcomePage"
+    "workbench.startupEditor": "welcomePage",
+    "workbench.tree.renderIndentGuides": "always"
 }
