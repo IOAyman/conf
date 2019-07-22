@@ -19,7 +19,7 @@ then
   #composer
   # [[ -d $COMPILESCR/composer/ ]] && [[ `which php 2>/dev/null` ]] && export PATH=$COMPILESCR/composer:$PATH
   #vscode
-  [[ -d $COMPILESCR/vscode ]] && alias vsc=$COMPILESCR/vscode/bin/code && alias vscode=$COMPILESCR/vscode/bin/code
+  #[[ -d $COMPILESCR/vscode ]] && alias vsc=$COMPILESCR/vscode/bin/code && alias vscode=$COMPILESCR/vscode/bin/code
   #firefox-dev
   # [[ -d $COMPILESCR/ffd ]] && alias firefox-dev=$COMPILESCR/'ffd/firefox -P --no-remote'
   #doctl
