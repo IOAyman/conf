@@ -44,5 +44,12 @@
     "workbench.colorCustomizations": {},
     "workbench.iconTheme": "eq-material-theme-icons-ocean",
     "workbench.startupEditor": "welcomePage",
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "terminal.integrated.rendererType": "dom",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
