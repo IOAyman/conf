@@ -5,7 +5,7 @@ __ITALIC_ON=`tput sitm`
 __ITALIC_OFF=`tput ritm`
 __COLOR=`tput setaf 220`
 __COLOR_RESET=`tput sgr0`
-export PS1=${__COLOR}${__BOLD_ON}'`[[ $ISSERVER ]] && echo "[\h] "`\w`[[ -z "$(which __docker_machine_ps1 2>/dev/null)" ]] || __docker_machine_ps1` ▬► '${__BOLD_OFF}${__COLOR_RESET}
+export PS1=${__COLOR}${__BOLD_ON}'`[[ $ISSERVER ]] && tput setaf 14 && echo "[\u@\h] "`\w`[[ -z "$(which __docker_machine_ps1 2>/dev/null)" ]] || __docker_machine_ps1` ▬► '${__BOLD_OFF}${__COLOR_RESET}
 
 #history
 export HISTFILE=~/.bash/history
