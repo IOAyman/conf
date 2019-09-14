@@ -34,5 +34,6 @@
 	"quitOnWindowClose": false,
 	"keepMeSignedIn": true,
 	"autoplayVideos": false,
-	"hideDockIcon": false
+	"hideDockIcon": false,
+	"privateMode": false
 }
