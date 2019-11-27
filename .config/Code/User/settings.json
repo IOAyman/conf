@@ -54,5 +54,15 @@
     },
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
-    }
+    },
+    "todohighlight.isEnable": true,
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "white",
+            "backgroundColor": "grey",
+            "overviewRulerColor": "grey",
+            "borderRadius": "2px"
+        },
+    ]
 }
