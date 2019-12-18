@@ -46,6 +46,7 @@
     "workbench.startupEditor": "welcomePage",
     "workbench.tree.renderIndentGuides": "always",
     "terminal.integrated.rendererType": "dom",
+    "explorer.compactFolders": true,
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
@@ -64,5 +65,5 @@
             "overviewRulerColor": "grey",
             "borderRadius": "2px"
         },
-    ]
+    ],
 }
