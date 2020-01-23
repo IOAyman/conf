@@ -35,7 +35,7 @@
     "git.autofetch": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "vsicons.projectDetection.autoReload": true,
-    "workbench.colorTheme": "Material Theme Ocean",
+    "workbench.colorTheme": "Solarized Light",
     "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
     "workbench.list.horizontalScrolling": true,
@@ -66,4 +66,6 @@
             "borderRadius": "2px"
         },
     ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
 }
