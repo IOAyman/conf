@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.6
+###  vlc 3.0.8
 ###
 
 ###
@@ -1487,11 +1487,17 @@
 # Tone-mapping algorithm (integer)
 #tone-mapping=3
 
+# Desaturation strength (float)
+#desat-strength=0.750000
+
+# Desaturation exponent (float)
+#desat-exponent=1.500000
+
+# Desaturation base (float)
+#desat-base=0.180000
+
 # Tone-mapping parameter (float)
 #tone-mapping-param=0.000000
-
-# Tone-mapping desaturation coefficient (float)
-#tone-mapping-desat=0.500000
 
 # Highlight clipped pixels (boolean)
 #tone-mapping-warn=0
@@ -1599,32 +1605,6 @@
 # Video height (integer)
 #glspectrum-height=300
 
-[projectm] # libprojectM effect
-
-# projectM preset path (string)
-#projectm-preset-path=/usr/share/projectM/presets
-
-# Title font (string)
-#projectm-title-font=/usr/share/fonts/dejavu/DejaVuSans.ttf
-
-# Font menu (string)
-#projectm-menu-font=/usr/share/fonts/dejavu/DejaVuSansMono.ttf
-
-# Video width (integer)
-#projectm-width=800
-
-# Video height (integer)
-#projectm-height=500
-
-# Mesh width (integer)
-#projectm-meshx=32
-
-# Mesh height (integer)
-#projectm-meshy=24
-
-# Texture size (integer)
-#projectm-texture-size=1024
-
 [lua] # Lua interpreter
 
 # Lua interface (string)
@@ -1680,7 +1660,7 @@
 #prefetch-buffer-size=16384
 
 # Read size (integer)
-#prefetch-read-size=16384
+#prefetch-read-size=16777216
 
 # Seek threshold (integer)
 #prefetch-seek-threshold=16384
@@ -1779,7 +1759,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.6 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.8 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3477,6 +3457,9 @@ qt-privacy-ask=0
 
 # Advanced options (string)
 #sout-avformat-options=
+
+# Reset timestamps (boolean)
+#sout-avformat-reset-ts=0
 
 [mjpeg] # M-JPEG camera demuxer
 
