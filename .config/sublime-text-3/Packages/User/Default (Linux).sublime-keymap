@@ -23,4 +23,5 @@
   { "keys": ["ctrl+k", "ctrl+m"], "command": "toggle_minimap" },
   { "keys": ["ctrl+shift+v"], "command": "paste" },
   { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+  { "keys": ["alt+z"], "command": "toggle_setting", "args": {"setting": "word_wrap"} },
 ]
