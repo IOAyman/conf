@@ -4,9 +4,9 @@
 	"vibrancy": "none",
 	"zoomFactor": 1.1,
 	"lastWindowState": {
-		"x": 549,
+		"x": 703,
 		"y": 28,
-		"width": 1049,
+		"width": 895,
 		"height": 870
 	},
 	"menuBarMode": false,
@@ -35,5 +35,8 @@
 	"keepMeSignedIn": true,
 	"autoplayVideos": false,
 	"hideDockIcon": false,
-	"privateMode": false
+	"privateMode": false,
+	"showPrivateModePrompt": false,
+	"sidebar": "default",
+	"callRingtoneMuted": true
 }
