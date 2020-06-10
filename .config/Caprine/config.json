@@ -7,7 +7,8 @@
 		"x": 703,
 		"y": 28,
 		"width": 895,
-		"height": 870
+		"height": 870,
+		"isMaximized": false
 	},
 	"menuBarMode": false,
 	"showDockIcon": true,
@@ -38,5 +39,9 @@
 	"privateMode": false,
 	"showPrivateModePrompt": false,
 	"sidebar": "default",
-	"callRingtoneMuted": true
+	"callRingtoneMuted": true,
+	"spellCheckerLanguages": [
+		"fr"
+	],
+	"isSpellCheckerEnabled": true
 }

@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.8
+###  vlc 3.0.10
 ###
 
 ###
@@ -798,6 +798,23 @@
 # Image quality (integer)
 #rfb-quality-level=9
 
+[access_srt] # SRT input
+
+# SRT chunk size (bytes) (integer)
+#chunk-size=1316
+
+# Return poll wait after timeout milliseconds (-1 = infinite) (integer)
+#poll-timeout=-1
+
+# SRT latency (ms) (integer)
+#latency=125
+
+# Password for stream encryption (string)
+#passphrase=
+
+# Crypto key length in bytes (integer)
+#key-length=16
+
 [linsys_hdsdi] # HD-SDI Input
 
 # Link # (integer)
@@ -1487,15 +1504,6 @@
 # Tone-mapping algorithm (integer)
 #tone-mapping=3
 
-# Desaturation strength (float)
-#desat-strength=0.750000
-
-# Desaturation exponent (float)
-#desat-exponent=1.500000
-
-# Desaturation base (float)
-#desat-base=0.180000
-
 # Tone-mapping parameter (float)
 #tone-mapping-param=0.000000
 
@@ -1507,6 +1515,18 @@
 
 # Dither depth override (0 = framebuffer depth) (integer)
 #dither-depth=0
+
+# Desaturation strength (float)
+#desat-strength=0.750000
+
+# Desaturation exponent (float)
+#desat-exponent=1.500000
+
+# Desaturation base (float)
+#desat-base=0.180000
+
+# Maximum brightness boost (float)
+#max-boost=0.000000
 
 [vmem] # Video memory output
 
@@ -1759,7 +1779,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.8 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.10 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -3651,6 +3671,15 @@ qt-privacy-ask=0
 # Use regular HTTP modules (boolean)
 #adaptive-use-access=0
 
+# Live Playback delay (ms) (integer)
+#adaptive-livedelay=15000
+
+# Max buffering (ms) (integer)
+#adaptive-maxbuffer=30000
+
+# Low latency (integer)
+#adaptive-lowlatency=-1
+
 [logo] # Logo sub source
 
 # Logo filenames (string)
@@ -3870,6 +3899,23 @@ qt-privacy-ask=0
 
 # Refresh period in ms (integer)
 #marq-refresh=1000
+
+[access_output_srt] # SRT stream output
+
+# SRT chunk size (bytes) (integer)
+#chunk-size=1316
+
+# Return poll wait after timeout milliseconds (-1 = infinite) (integer)
+#poll-timeout=100
+
+# SRT latency (ms) (integer)
+#latency=125
+
+# Password for stream encryption (string)
+#passphrase=
+
+# Crypto key length in bytes (integer)
+#key-length=16
 
 [file] # File stream output
 
@@ -4335,7 +4381,7 @@ vout=any
 #meta-url=
 
 # File caching (ms) (integer)
-#file-caching=300
+#file-caching=1000
 
 # Live capture caching (ms) (integer)
 #live-caching=300
