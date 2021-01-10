@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.10
+###  vlc 3.0.11.1
 ###
 
 ###
@@ -264,6 +264,14 @@
 
 # Time between two alarm messages in ms (integer)
 #audiobargraph_a-repetition_time=2000
+
+[spatialaudio] # Ambisonics renderer and binauralizer
+
+# Headphones mode (binaural) (boolean)
+#spatialaudio-headphones=0
+
+# HRTF file for the binauralization (string)
+#hrtf-file=
 
 [headphone] # Headphone virtual spatialization effect
 
@@ -1779,7 +1787,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.10 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.11.1 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
