@@ -19,14 +19,14 @@ alias writeinclipboard='[[ -x `which xclip 2>/dev/null` ]] && cat << EOF | xclip
 alias youtube-dlaudio='youtube-dl -c -x --audio-format=mp3 --audio-quality=0 --embed-thumbnail --xattrs '
 #alias prettyjson='python -m json.tool'
 alias prettyjson='jq .'
-[[ -x `which docker 2>/dev/null` ]] \
-    && alias dps='docker ps' \
-    && alias dpsa='docker ps -a' \
-    && alias dimg='docker images' \
-    && alias dc='docker-compose' \
-    && alias dm='docker-machine' \
-    && alias dme='dmenv' \
-    && alias dmu='dmenv -u'
+#[[ -x `which docker 2>/dev/null` ]] \
+#    && alias dps='docker ps' \
+#    && alias dpsa='docker ps -a' \
+#    && alias dimg='docker images' \
+#    && alias dc='docker-compose' \
+#    && alias dm='docker-machine' \
+#    && alias dme='dmenv' \
+#    && alias dmu='dmenv -u'
 [[ -x `which exa 2>/dev/null` ]] \
     && alias ls='exa -a' \
     && alias l='ls' \

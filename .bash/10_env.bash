@@ -38,6 +38,8 @@ then
   [[ -d $COMPILESCR/helm ]] && export PATH=$COMPILESCR/helm:$PATH
   #up
   [[ -d $COMPILESCR/up ]] && export PATH=$COMPILESCR/up:$PATH
+  #rar
+  [[ -d $COMPILESCR/rar ]] && export PATH=$COMPILESCR/rar:$PATH
 fi
 
 #andy tools
