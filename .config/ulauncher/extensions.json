@@ -6,13 +6,6 @@
         "last_commit": "1ec383e4efca5728a94b4941ef8e0db480ccc72a",
         "last_commit_time": "2021-03-06T09:31:31"
     },
-    "com.github.kuenzelit.ulauncher-firefox-bookmarks": {
-        "id": "com.github.kuenzelit.ulauncher-firefox-bookmarks",
-        "url": "https://github.com/KuenzelIT/ulauncher-firefox-bookmarks",
-        "updated_at": "2021-03-28T11:17:35.108109",
-        "last_commit": "77f1de0adfc2e79ce767f645ae8ad0a0dda2783e",
-        "last_commit_time": "2019-12-07T17:27:46"
-    },
     "com.github.the-lay.ulauncher-spotify-api": {
         "id": "com.github.the-lay.ulauncher-spotify-api",
         "url": "https://github.com/the-lay/ulauncher-spotify-api",
