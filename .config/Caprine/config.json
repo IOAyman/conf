@@ -1,6 +1,4 @@
 {
-	"followSystemAppearance": false,
-	"darkMode": true,
 	"vibrancy": "none",
 	"zoomFactor": 1.1,
 	"lastWindowState": {
@@ -43,5 +41,6 @@
 	"spellCheckerLanguages": [
 		"fr"
 	],
-	"isSpellCheckerEnabled": true
+	"isSpellCheckerEnabled": true,
+	"theme": "dark"
 }
