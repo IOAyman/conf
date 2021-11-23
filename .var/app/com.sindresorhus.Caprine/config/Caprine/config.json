@@ -42,5 +42,6 @@
 		"fr"
 	],
 	"isSpellCheckerEnabled": true,
-	"theme": "dark"
+	"theme": "dark",
+	"showAlwaysOnTopPrompt": true
 }
