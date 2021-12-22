@@ -1,11 +1,12 @@
 # https://wiki.archlinux.org/index.php/Bash/Prompt_customization#Common_capabilities
-__BODL_ON=`tput bold`
+__BODL_ON="\[`tput bold`\]"
 __BOLD_OFF=
-__ITALIC_ON=`tput sitm`
-__ITALIC_OFF=`tput ritm`
-__COLOR=`tput setaf 49`
-__COLOR_RESET=`tput sgr0`
-export PS1=${__COLOR}${__BOLD_ON}'`[[ $ISSERVER ]] && tput setaf 14 && echo "[\u@\h] "`\w`[[ -z "$(which __docker_machine_ps1 2>/dev/null)" ]] || __docker_machine_ps1` ▬► '${__BOLD_OFF}${__COLOR_RESET}
+__ITALIC_ON="\[`tput sitm`\]"
+__ITALIC_OFF="\[`tput ritm`\]"
+__COLOR="\[`tput setaf 49`\]"
+__COLOR_SERVER="\[`tput setaf 14`\]"
+__COLOR_RESET="\[`tput sgr0`\]"
+export PS1=${__COLOR}${__BOLD_ON}'`[[ $ISSERVER ]] && echo "${__COLOR_SERVER}" && echo "[\u@\h] "`\w`[[ -z "$(which __docker_machine_ps1 2>/dev/null)" ]] || __docker_machine_ps1` ▬► '${__BOLD_OFF}${__COLOR_RESET}
 #export PS1="$($HOME/.local/bin/oh-my-posh -config ~/oh-my-posh/themes/main -error $?)"
 
 
