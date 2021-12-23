@@ -75,4 +75,5 @@
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "editor.inlineSuggest.enabled": true,
+    "tailwindCSS.emmetCompletions": true,
 }
