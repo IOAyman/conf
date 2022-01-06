@@ -76,4 +76,6 @@
     },
     "editor.inlineSuggest.enabled": true,
     "tailwindCSS.emmetCompletions": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
 }
