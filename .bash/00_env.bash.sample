@@ -4,3 +4,5 @@
 #export COMPILESCR=
 #export STREAMING=
 #export WORKON_HOME=~/.virtualenvs
+#export WEATHER_LOCATIONS=
+#export COVID_LOCATION=
