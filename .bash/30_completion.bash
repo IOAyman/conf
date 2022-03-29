@@ -9,6 +9,9 @@
 # NPM
 [[ `which npm 2>/dev/null` ]] && . <(npm completion)
 
+# gmailctl
+[[ `which gmailctl 2>/dev/null` ]] && . <(gmailctl completion bash)
+
 # Load NVM completion
 [[ $NVM_DIR ]] && \
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
