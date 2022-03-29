@@ -29,6 +29,7 @@
    rs = reset
    rshd = reset --hard
    rsmx = reset --mixed
+   clf = clean -f
    rb = rebase -i
    st = stash
    forget = update-index --assume-unchanged
