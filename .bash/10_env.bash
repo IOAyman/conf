@@ -40,6 +40,8 @@ then
   [[ -d $COMPILESCR/up ]] && export PATH=$COMPILESCR/up:$PATH
   #rar
   [[ -d $COMPILESCR/rar ]] && export PATH=$COMPILESCR/rar:$PATH
+  #flutter
+  [[ -d $COMPILESCR/flutter ]] && export PATH=$COMPILESCR/flutter/bin:$PATH
 fi
 
 #andy tools

@@ -12,6 +12,9 @@
 # gmailctl
 [[ `which gmailctl 2>/dev/null` ]] && . <(gmailctl completion bash)
 
+# flutter
+[[ `which flutter 2>/dev/null` ]] && . <(flutter bash-completion)
+
 # Load NVM completion
 [[ $NVM_DIR ]] && \
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
