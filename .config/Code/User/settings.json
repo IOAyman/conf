@@ -42,7 +42,7 @@
     "explorer.openEditors.visible": 5,
     "window.zoomLevel": 0,
     "workbench.colorCustomizations": {},
-    "workbench.iconTheme": "eq-material-theme-icons-ocean",
+    "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "welcomePage",
     "workbench.tree.renderIndentGuides": "always",
     "terminal.integrated.rendererType": "dom",
