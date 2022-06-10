@@ -41,7 +41,7 @@ then
   #rar
   [[ -d $COMPILESCR/rar ]] && export PATH=$COMPILESCR/rar:$PATH
   #flutter
-  [[ -d $COMPILESCR/flutter ]] && export PATH=$COMPILESCR/flutter/bin:$PATH
+  [[ -d $COMPILESCR/flutter ]] && export PATH=$COMPILESCR/flutter/bin:$HOME/.pub-cache/bin:$PATH
 fi
 
 #andy tools
