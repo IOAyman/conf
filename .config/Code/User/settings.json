@@ -36,7 +36,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "vsicons.projectDetection.autoReload": true,
     "workbench.colorTheme": "Solarized Light",
-    "editor.minimap.enabled": false,
     "explorer.confirmDelete": false,
     "workbench.list.horizontalScrolling": true,
     "explorer.openEditors.visible": 5,
@@ -82,9 +81,12 @@
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
         "editor.selectionHighlight": false,
+        "editor.wordWrapColumn": 80,
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
         "editor.wordBasedSuggestions": false
     },
+    "dart.lineLength": 100,
+    "editor.minimap.enabled": false,
 }

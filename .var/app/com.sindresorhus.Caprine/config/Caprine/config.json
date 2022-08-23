@@ -2,10 +2,10 @@
 	"vibrancy": "none",
 	"zoomFactor": 1.1,
 	"lastWindowState": {
-		"x": 703,
-		"y": 28,
-		"width": 895,
-		"height": 870,
+		"x": 0,
+		"y": 0,
+		"width": 1600,
+		"height": 900,
 		"isMaximized": false
 	},
 	"menuBarMode": false,
@@ -43,5 +43,6 @@
 	],
 	"isSpellCheckerEnabled": true,
 	"theme": "dark",
-	"showAlwaysOnTopPrompt": true
+	"showAlwaysOnTopPrompt": true,
+	"autoUpdate": true
 }
