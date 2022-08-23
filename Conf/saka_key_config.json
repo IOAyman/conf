@@ -762,7 +762,7 @@
         "blacklist": "config"
       },
       "ioayman": {
-        "blacklist": "^config.*"
+        "blacklist": "config.*,app.clickup.com/*"
       }
     }
   }
