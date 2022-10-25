@@ -1,8 +1,8 @@
 {
     "editor.tabSize": 2,
-    "editor.cursorStyle": "underline",
+    "editor.cursorStyle": "line",
     "editor.wordWrap": "on",
-    "editor.cursorBlinking": "solid",
+    "editor.cursorBlinking": "smooth",
     "editor.formatOnPaste": true,
     "editor.quickSuggestions": {
         "other": true,
@@ -10,14 +10,15 @@
         "strings": false
     },
     "editor.quickSuggestionsDelay": 10,
+    "editor.linkedEditing": true,
     "workbench.activityBar.visible": false,
     "workbench.commandPalette.preserveInput": true,
     "workbench.editor.closeOnFileDelete": false,
-    "workbench.editor.showTabs": false,
+    "workbench.editor.showTabs": true,
     "workbench.statusBar.feedback.visible": false,
     "window.closeWhenEmpty": false,
     "window.enableMenuBarMnemonics": false,
-    "window.menuBarVisibility": "hidden",
+    "window.menuBarVisibility": "toggle",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "zenMode.restore": true,
@@ -35,7 +36,7 @@
     "git.autofetch": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "vsicons.projectDetection.autoReload": true,
-    "workbench.colorTheme": "Solarized Light",
+    "workbench.colorTheme": "Default Dark+",
     "explorer.confirmDelete": false,
     "workbench.list.horizontalScrolling": true,
     "explorer.openEditors.visible": 5,
@@ -69,6 +70,9 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
