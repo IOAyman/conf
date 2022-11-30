@@ -14,7 +14,7 @@ export PS1=${__COLOR}${__BOLD_ON}'`[[ $ISSERVER ]] && echo "${__COLOR_SERVER}" &
 export HISTFILE=~/.bash/history
 export HISTCONTROL=ignoreboth
 export HISTIGNORE="l:la:ls:ll:lll:cd:cd :..:exit*:drupgrade*:sync*:khen9oni"
-export HISTSIZE=5000
+export HISTSIZE=50000
 
 #load config
 [[ `ls ~/.bash/*.bash 2>/dev/null` ]] && for f in `ls ~/.bash/*.bash |grep -v 'profile.bash' |sort`; do . $f; done
