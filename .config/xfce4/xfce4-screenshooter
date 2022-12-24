@@ -9,4 +9,5 @@ last_extension=png
 enable_imgur_upload=true
 show_in_folder=false
 show_border=1
+custom_action_command=none
 

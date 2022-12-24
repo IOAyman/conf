@@ -25,17 +25,17 @@ then
   #doctl
   [[ -d $COMPILESCR/doctl ]] && export PATH=$COMPILESCR/doctl:$PATH
   #terraform
-  [[ -d $COMPILESCR/terraform ]] && export PATH=$COMPILESCR/terraform:$PATH
+  # [[ -d $COMPILESCR/terraform ]] && export PATH=$COMPILESCR/terraform:$PATH
   #wrk
   [[ -d $COMPILESCR/wrk ]] && export PATH=$COMPILESCR/wrk:$PATH
   #exa
   [[ -d $COMPILESCR/exa ]] && export PATH=$COMPILESCR/exa:$PATH
   #bat
-  [[ -d $COMPILESCR/bat ]] && export PATH=$COMPILESCR/bat:$PATH
+  # [[ -d $COMPILESCR/bat ]] && export PATH=$COMPILESCR/bat:$PATH
   #q
   [[ -d $COMPILESCR/q ]] && [[ -x $COMPILESCR/q/bin/q ]] && alias q=$COMPILESCR/q/bin/q
   #helm
-  [[ -d $COMPILESCR/helm ]] && export PATH=$COMPILESCR/helm:$PATH
+  # [[ -d $COMPILESCR/helm ]] && export PATH=$COMPILESCR/helm:$PATH
   #up
   [[ -d $COMPILESCR/up ]] && export PATH=$COMPILESCR/up:$PATH
   #rar
