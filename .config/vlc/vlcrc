@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 3.0.17.2
+###  vlc 3.0.18
 ###
 
 ###
@@ -9,7 +9,7 @@
 [freetype] # Freetype2 font renderer
 
 # Font (string)
-#freetype-font=DejaVuSans
+freetype-font=DejaVu Sans
 
 # Monospace Font (string)
 #freetype-monofont=DejaVuSansMono
@@ -1562,13 +1562,13 @@
 #dither-depth=0
 
 # Desaturation strength (float)
-#desat-strength=0.900000
+#desat-strength=0.000000
 
 # Desaturation exponent (float)
-#desat-exponent=0.200000
+#desat-exponent=0.000000
 
 # Desaturation base (float)
-#desat-base=0.180000
+#desat-base=0.000000
 
 # Maximum brightness boost (float)
 #max-boost=0.000000
@@ -1824,7 +1824,7 @@
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 3.0.17.2 Vetinari
+#sout-avi-encoder=VLC Media Player - 3.0.18 Vetinari
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -1955,7 +1955,7 @@
 #subsdec-align=-1
 
 # Subtitle text encoding (string)
-#subsdec-encoding=
+subsdec-encoding=UTF-8
 
 # UTF-8 subtitle autodetection (boolean)
 #subsdec-autodetect-utf8=1
